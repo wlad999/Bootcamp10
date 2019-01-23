@@ -1,0 +1,30 @@
+* {box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.header {height: 100px;
+background-color: red;
+margin: 4px;
+}
+.nav {height: 50px;
+background: royalblue;
+margin: 4px;
+}
+.coutent {display: inline-block;
+width: 70%;
+background-color: sienna;
+height: 250px;
+margin-right: -4px;
+margin-left: 4px;
+}
+.sidebar {display: inline-block;
+width: 30%;
+background-color: violet;
+height: 250px;
+margin-right: -4px;
+margin-left: 0px;
+}
+.footer {height: 100px;
+background-color:green;
+margin: 4px;
+}
