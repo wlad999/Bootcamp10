@@ -1,0 +1,37 @@
+* {box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav {display: inline-block;
+    width: 23%;
+    background-color: sienna;
+    text-align: center;
+    height: 50px;
+    margin-right: -5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    }
+
+.coutent {display: inline-block;
+        background-color: red;
+        margin-right: -5px;
+        padding: 10px 10px;
+       }
+
+.box {display: inline-block;
+    width:45%;
+    background-color: rgb(64, 160, 45);
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom:30px; }
+.box1 {margin-top: 0px;
+    margin-left: 10;
+    margin-right: 10;
+    margin-bottom: 10px;
+    background-size: cover;
+    }
+    
+h2 {text-align: center; 
+}
+button {font-size: 30px;
+}

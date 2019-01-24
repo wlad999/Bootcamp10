@@ -28,3 +28,27 @@ margin-left: 0px;
 background-color:green;
 margin: 4px;
 }
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    margin-top: 10px;
+    background-image: url(../../homework01/img/image2.png);
+    background-size: cover;
+    }
+.box {
+width: 100px;
+height: 100px;
+background-color: red;
+margin-right: 20px;
+text-align: center;
+}
+
+.a{
+background-image: url(../../homework01/img/image2.png);
+background-size: cover;
+
+background: no-repeat;
+font-family: 'Major Mono Display', monospace;
+
+ }
