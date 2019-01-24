@@ -10,6 +10,7 @@
     margin-right: -5px;
     margin-left: 10px;
     margin-bottom: 5px;
+    color: black;
     }
 
 .coutent {display: inline-block;
@@ -29,9 +30,12 @@
     margin-right: 10;
     margin-bottom: 10px;
     background-size: cover;
+    width: 
     }
     
 h2 {text-align: center; 
 }
-button {font-size: 30px;
-}
+button {font-size: 30px;}
+    img {height: 250px;
+    }
+
