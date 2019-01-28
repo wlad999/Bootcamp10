@@ -69,6 +69,12 @@
     margin-right: 21px;
     margin-bottom: 21px;
 }
+.kv:hover .name { 
+    background-color: aqua;
+}
+.kv:hover .dol { 
+    background-color: aqua;}
+
 .pic {
     width: 255px;
     height: 280px;
@@ -129,7 +135,7 @@
 .wrapper2 {
     margin-top: 50px;
 }  
-.s2 {max-width: 1106px;
+.s2 {max-width: 1115px;
     margin: auto;
     margin-top: 50px;
     }
