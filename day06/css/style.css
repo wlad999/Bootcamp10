@@ -99,4 +99,104 @@
     top: 0;
     transform: translate(1156px, 625px);
     opacity: 1;
+    }
+.section2 {
+    max-width: 1440px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    background-color:#ffffff;
+    /*outline: 1px solid red;*/
+    position: relative;
+    /*overflow: hidden;*/
+    }
+.leftbox-s2 {
+    padding-top: 184px;
+    max-width: 874px;
+    /*height: 720px;*/
+    display: inline-block;
+    margin-left: 0px;
+    /*outline: 1px solid black;*/
+    vertical-align: top;
+    /*padding-left: 149px;
+    padding-right: 150px;*/
+
+    }
+.rightbox-s2 {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    width: 566px;
+    height: 724px;
+    background-color: #ececec;
+    margin-left: -4px;
+    /*outline: 1px solid green;*/
+    position: relative;
+    overflow: hidden;
+
+}
+.s2-h4 {
+    font-size: 16pt;
+    color: rgba(255, 109, 109, 255);
+    text-align: left;
+    font-family: Exo-Medium;
+    padding-left: 140px;
+}
+.s2-h1 {
+    padding-bottom: 50px;
+    font-family: Exo-Medium;
+    font-size: 40pt;
+    color: rgba(40, 40, 40, 255);
+    text-align: left;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.s2-h2 {
+    padding-bottom: 40px;
+    font-family: Exo-Medium;
+    font-size: 16pt;
+    color: rgba(40, 40, 40, 255);
+    text-align: left;
+    padding-left: 140px;
+    padding-right: 130px;
+}
+.s2-h3 {
+    font-family: Exo-Medium;
+    font-size: 16pt;
+    color: rgba(40, 40, 40, 255);
+    text-align: left;
+    padding-left: 140px;
+    padding-right: 110px;
+}
+.rotate1 {
+    position: absolute;
+    transform: translate(-63px);
+}
+.s1span {
+    color: red;
+}
+.section3 {
+    max-width: 1440px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    background-color:#ffffff;
+    outline: 1px solid red;
+    position: relative;
+    /*overflow: hidden;*/
+    }
+.leftbox-s3 {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    width: 566px;
+    height: 724px;
+    background-color: #ececec;
+    margin-left: -4px;
+    /*outline: 1px solid green;*/
+    position: relative;
+    overflow: hidden;
+
 }

@@ -1,0 +1,24 @@
+.wrapper {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    outline: 1px solid blue;
+    margin: auto;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: brown;
+    margin: auto;
+}
+.containerInner {
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    transition: all 10s linear;
+}
+.wrapper:hover .containerInner {transform: translatex(500px);
+    transition: all 2s ease;}
