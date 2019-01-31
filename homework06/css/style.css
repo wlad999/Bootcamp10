@@ -5,24 +5,26 @@
 }
 .wrapper {
     max-width: 1920;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     margin: auto;
 }
 .section1 {/*display: flex;*/
-    max-width: 1200px;
+    max-width: 1920px;
     background-size: cover;
     background-position: center;
     margin: auto;
     background-color: #ffffff;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     
     }
 header {
     display: flex;
     width: 1200px;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
+    margin: auto;
     margin-top: 28px;
     margin-bottom: 0px;
+    
 
 }
 .logo-s1 {
@@ -69,11 +71,10 @@ header {
     display: flex;
     max-width: 1200px;
     height: 500;
-    outline: 1px solid violet;
+    /* outline: 1px solid violet; */
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: auto;
     align-content: space-between;
     }
 .blok-s1 {
@@ -81,7 +82,7 @@ header {
     font-size: 15pt;
     color: rgba(153, 153, 153, 255);
     text-align: left;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     display: flex;
     margin-top: 60px;
     }
@@ -125,14 +126,14 @@ main {
     margin: auto;
     justify-content: space-between;
     margin-bottom: 88px;
-    position: relative;
+    /* outline: 1px solid red; */
     
     }
-/*.pic-s2 {
-    display: flex;
-    max-width: 383px;
+.pic-2 {
+    /* display: flex; */
+    width: 383px;
     margin: auto;
-    /*position: relative;}*/
+    position: relative;} 
    
 .s2m1 {
     font-size: 14pt;
@@ -153,6 +154,7 @@ footer
     justify-content: space-between;
     margin-top: 12px;
     padding-bottom: 12px;
+    margin: auto;
     }
 .connect    
     {
@@ -211,15 +213,16 @@ button {
     opacity: 0;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    /* position: relative; */
 
 }
 
 .pic-2:hover .covers1 {
-    opacity: 0.5;
+    opacity: 0.7;
     transition: all 200ms ease;
     transform: translate(-10px, -10px);
-    box-shadow: 10px 10px blue;
+    box-shadow: 10px 10px#95e1d3;
 }
 .pic-2:hover .cn {
     opacity: 1;
@@ -233,6 +236,7 @@ button {
     position: absolute;
     top: 210px;
     left: 60px;
+    opacity: 0;
     
     /*justify-content: center;*/
     /*align-items: center;*/
@@ -247,16 +251,7 @@ button {
     /*display: flex;
     margin: auto;*/
     padding-top: 17px;
-    
- 
-}
-/*button {
-    width: 55px;
-    height: 55px;
-    border: none;
-    list-style: none;}*/
-
-
+ }
 .li-s1:hover::after{ content:"";
     display: block;
     width: 70px;
@@ -266,3 +261,9 @@ button {
     }
 .li-s1:hover{ color: #f38181;
 }
+.cn-name:hover{ 
+    background-color: #95e1d3;
+}
+.cn-name:hover .covers1{ 
+    opacity: 0.7;
+} 
