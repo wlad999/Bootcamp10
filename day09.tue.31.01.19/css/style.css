@@ -1,0 +1,142 @@
+*{box-sizing: border-box;
+margin: 0;
+padding: 0;}
+.section1 {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    margin: auto;
+}
+.wrapper-s1 {
+    margin: auto;
+    outline: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    padding: 7px;
+}
+.section2 {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    background-image: url(/img/1/2.png)
+}
+.wrapper-s2 {
+    margin: auto;
+    outline: 1px solid red;
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 120px;
+    justify-content: space-around;}
+
+.h1 {color: white;
+    margin: auto;
+    font-size: 40px;}
+
+.section3 {
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+        background-image: url()
+    }
+.wrapper-s3 {
+    margin: auto;
+    outline: 1px solid red;
+    display: flex;
+    }
+.blok-s3 {
+    display: flex;
+    margin: auto;
+}
+.blok-s3-1 {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 50%;
+   
+    text-align: left;
+}
+.blok-s3-2 {
+    /* height: auto; */
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    background-image: url(/img/3/cover@1X.png), url(/img/3/Composed-layer@1X.png);
+    /* background-color: blue; */
+    outline: 1px solid black;
+}
+
+.section4 {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    background-image: url()
+}
+.wrapper-s4 {
+margin: auto;
+outline: 1px solid red;
+display: flex;
+max-width: 480px;
+
+}
+.blok-s4 {
+display: flex;
+margin: auto;
+max-width: 480px;
+}
+.blok-s4-2 {
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+/* align-content: space-around; */
+text-align: left;
+padding: 5px;
+}
+.blok-s4-1 {
+/* height: auto; */
+width: 50%;
+height: 500px;
+background-size: cover;
+background-position: center;
+margin: auto;
+background-image: url(/img/4/deadmau5-cube@1X.png);
+/* background-color: blue; */
+outline: 1px solid black;
+}
+.section5 {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: flex;
+}
+.wrapper-s5 {
+margin: auto;
+outline: 1px solid red;
+display: flex;
+}
+.blok-s5 {
+display: flex;
+margin: auto;
+
+}
+.pic-s51 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 50%;
+}
+/* .pic1 { */
+    /* width: 33,33%; */
+    /* height: 150px; */
+   /* } */
+.pic-s52 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;}

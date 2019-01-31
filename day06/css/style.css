@@ -183,10 +183,10 @@
     margin: auto;
     background-color:#ffffff;
     outline: 1px solid red;
-    position: relative;
+    /*position: relative;
     /*overflow: hidden;*/
     }
-.leftbox-s3 {
+/*.leftbox-s3 {
     display: inline-block;
     background-size: cover;
     background-position: center;
@@ -195,8 +195,29 @@
     height: 724px;
     background-color: #ececec;
     margin-left: -4px;
-    /*outline: 1px solid green;*/
+    outline: 1px solid green;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;}
+    */
+
+
+.ridth-s3 {
+    /*display: inline-block;*/
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    max-width: 701px;
+    height: 551px;
+    background-color: #ececec;
+    margin-left: -4px;
+    outline: 1px solid green;
+    /*overflow: hidden;*/
+}
+.rot3-1 {
+    width: 1654px;
+    height: 1553px;
+    position: absolute;
+    top: 0;
+    transform: translate(-2000px, 0px);
 
 }
