@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.eot); /* IE9 Compat Modes */
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         /* url('../fonts/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+         url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.woff2) format('woff2'), /* Super Modern Browsers */
+         url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.woff) format('woff'), /* Modern Browsers */
+         /* url('../fonts/montserrat-v12-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
+         /* url('../fonts/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); Legacy iOS */
+  }
+
+
+  /* roboto-slab-700 - latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-slab-v7-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'),
+         url('../fonts/roboto-slab-v7-latin-700.eot?#iefix') format('embedded-opentype'), IE6-IE8
+         url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff2) format('woff2'), /* Super Modern Browsers */
+         url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff) format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-slab-v7-latin-700.ttf') format('truetype'), Safari, Android, iOS
+         url('../fonts/roboto-slab-v7-latin-700.svg#RobotoSlab') format('svg'); /*Legacy iOS*/
+  }
+  
+/* amita-regular - latin */
+@font-face {
+    font-family: 'Amita';
+    font-style: normal;
+    font-weight: 400;
+    /* src: url('../fonts/amita-v4-latin/amita-v4-latin-regular.eot'); IE9 Compat Modes */
+    src: local('Amita Regular'), local('Amita-Regular'),
+         /* url('../fonts/amita-v4-latin/amita-v4-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+         url('../fonts/amita-v4-latin/amita-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         /* url(../fonts/amita-v4-latin/amita-v4-latin-regular.woff) format('woff'), Modern Browsers */
+         /* url('../fonts/amita-v4-lat?in/amita-v4-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
+         url('../fonts/amita-v4-latin/amita-v4-latin-regular.svg#Amita') format('svg'); /*Legacy iOS*/
+  }
+
+
+
+
+
+
+
+.one {
+    /* background-color: rgb(185, 181, 181); */
+    width: 1400px;
+    margin: auto;
+    /* outline: 1px solid red; */
+    text-align: center;
+
+}
+.wrapper {
+    margin: auto;
+    width: 940px;
+    /* outline: 1px solid green; */
+}
+
+
+header {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* outline: 1px solid black; */
+    align-items: center;
+    margin-bottom: 127px;
+    padding-top: 40px;
+
+}
+.logo {
+font-family: 'Amita';
+font-size: 26px;
+color: #fed136;
+text-align: left;
+}
+ul, li {
+list-style: none;
+text-decoration: none;
+display: flex;
+font-family: 'Montserrat';
+font-size: 14px;
+/* font-style: italic;
+font-weight: 900; */
+color: black;
+text-transform: uppercase;
+justify-content: space-around;
+width: 450px;
+}
+h1 {
+    margin-bottom: 19px;
+    font-family: 'Roboto Slab';
+    font-size: 40px;
+    font-style: normal;
+    color: rgba(34, 34, 34, 255);
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: DroidSerif-Italic, RobotoSlab-Regular, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(119, 119, 119, 255);
+    text-align: center;
+    margin-bottom: 80px;
+    }
+main {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    }
+.sens {
+    width: 274px;
+    margin-bottom: 120px;
+    /* outline: 3px solid violet; */
+   }
+h3 {
+margin-top: 28px;
+font-family: RobotoSlab-Bold, Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+font-size: 18px;
+color: rgba(34, 34, 34, 255);
+margin-bottom: 18px;
+}
+h4 {
+font-family: RobotoSlab-Bold, RobotoSlab-Regular, AdobeInvisFont, MyriadPro-Regular;
+font-size: 14px;
+color: rgba(119, 119, 119, 255);
+text-align: center;
+}
+.two {
+    background-image: url(../img/Background.png);
+    background-size: cover;
+    background-position: center;
+    width: 1400px;
+    margin: auto;
+    /* outline: 1px solid red; */
+    text-align: center;
+    font-family: RobotoSlab-Bold, RobotoSlab-Regular, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 255);
+    text-align: center;
+    position: relative;
+
+}
+.wrapper2 {
+    margin: auto;
+    width: 940px;
+    /* outline: 1px solid green; */
+    padding-bottom: 115px;
+}
+h5 {font-family: RobotoSlab-Bold, Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 255);
+    padding-top: 100px;
+    text-transform: uppercase;
+    }
+h6 {
+    font-family: DroidSerif-Italic, RobotoSlab-Regular, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 16pt;
+    font-style: italic;
+    color: rgba(119, 119, 119, 255);
+    text-align: center;
+    margin-bottom: 76px;
+    }
+.customer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+form, input {
+    font-size: 14px;
+}
+input { 
+    width: 455px;
+    height: 50px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    padding: 0;
+    border-radius: 5px;
+    text-indent: 20px;
+    }
+/* input:focus {outline: 3px solid green}  */
+
+/* .send {
+    outline: 1px solid green;
+    margin: auto;
+ } */
+/* .text {
+    outline: 1px solid green;
+} */
+button {
+    display: block;
+    height: 66px;
+    width: 240px;
+    margin: auto;
+    background-color: #fed136;
+    border-radius: 5px;
+    font-family: Montserrat-Bold, ChunkFive-Roman, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 18pt;
+    color: rgba(255, 255, 255, 255);
+    text-transform: uppercase;
+    text-indent: 0px;
+    cursor: pointer;
+}
+li:hover {
+    color: #fed136;
+    cursor: pointer;
+}
+input[type="email"]:valid {outline: 2px solid green;}
+input[type="email"]:invalid {outline: 2px solid red;}
+input[type="text"]:valid {outline: 2px solid green;}
+input[type="text"]:invalid {outline: 2px solid red;}
+.continent { 
+    position: absolute;
+    top: 118px;
+    left: 788px;
+}
