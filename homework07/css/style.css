@@ -229,3 +229,7 @@ input[type="text"]:invalid {outline: 2px solid red;}
     top: 118px;
     left: 788px;
 }
+input[type="message"] {width: 455px;
+    height: 210px;
+text-align: 
+}
