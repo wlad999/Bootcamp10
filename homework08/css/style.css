@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+.sec1 {
+    max-width: 768px;
+    /* height: 542px; */
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    /* background-image: url(../img/1/Rectangle1.png); */
+    background-image: url(../img/1/222.png), url(../img/1/Rectangle111.png);
+    text-align: center;
+    padding-bottom: 139px;
+    padding-top: 21px;
+    /* outline: 1px solid blue; */
+    
+}
+header {
+    margin: auto;
+    margin-bottom: 38px;
+    }
+nav {
+    margin: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+   
+    align-items: center;
+    /* margin-bottom: 115px; */
+
+}   
+a {
+    text-decoration: none;
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    margin-right: 10px;
+
+}
+.inv {
+    border-radius: 18px;
+    width: 90px;
+    height: 36px;
+    background: transparent;
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    border-color: rgba(255, 255, 255, 255);
+    margin-left: 10px;
+    
+    }
+.url {
+    padding-top: 115px;
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    
+  }
+h1 {
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    /* margin-bottom: 18px; */
+    text-transform: uppercase;
+
+    }
+h2 {
+    font-family: Roboto-Light, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    width: 220px;
+    display: block;
+    margin: auto;
+    margin-top: 18px;
+    margin-bottom: 19px;
+    }
+.red {
+font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+font-size: 14pt;
+color: rgba(255, 255, 255, 255);
+text-align: center;
+background-color: #ff4e50;
+width: 280px;
+height: 40px;
+border-radius: 20px;
+border: none;
+}
+.sec2 {
+    max-width: 480px;
+    /* height: 542px; */
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff;
+    text-align: center;
+    /* padding-bottom: 139px; */
+    /* outline: 1px solid blue; */
+    padding-top: 68px;
+    padding-bottom: 60px;
+    }
+h3 {
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 22pt;
+    color: rgba(51, 51, 51, 255);
+    /* text-align: center; */
+    width: 300px;
+    /* display: block; */
+    margin: auto;
+    /* padding-top: 14px; */
+    margin-bottom: 14px;
+    }
+.main {
+    /* display: flex; */
+    /* position: relative; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+       
+}
+/* .first {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;} */
+/* .second {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;} */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    width: 220px;
+    margin: auto;
+    position: relative;
+    /* outline: 1px solid red; */
+
+}
+img {
+    border-radius: 100%;
+    margin-bottom: 20px;
+    /* width:  */
+}
+h4 {
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14pt;
+    color: rgba(51, 51, 51, 255);
+    text-align: center;
+    margin-bottom: 16px;
+}
+h5 {font-family: Roboto-Light, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14pt;
+    color: rgba(102, 102, 102, 255);
+    text-align: center;
+    margin-bottom: 28px;
+}
+.logo {
+    position: absolute;
+    top: 89px;
+    left: 170px;
+    /* rigrightht: 0px; */
+    border: 4px solid white;
+    border-radius: 100%;
+    
+    }
+ .inv-red {
+    font-family: Montserrat-Bold, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14pt;
+    color: rgba(255, 78, 80, 255);
+    text-align: center;
+    background: transparent;
+    border-color: #ff4e50;
+    color: #ff4e50;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 29px;
+ }
+
+ @media (min-width:768px)   {
+    .sec1  {
+    max-width: 960px;
+    }
+    header 
+    { 
+    display: flex;
+    flex-direction: row-reverse;
+    /* margin: auto; */
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    margin-bottom: 152px;
+
+    }
+    .nav {
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        padding-top: 0;
+        margin: 0;
+        width: 50%;
+        
+    }
+    .url {padding-top: 0;
+    width: 50%;
+    font-size: 24px;}
+    h1 {font-size: 52px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+        width: 500px;
+    }
+    .inv {
+        margin: 0;
+        
+        
+    }
+    
+    .sec2  {
+        max-width: 960px;
+        }
+    .main {
+        display: flex;
+        flex-direction: row; 
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* min-width: 500px; */
+        max-width: 500px;
+        /* outline: 1px solid green; */
+        }
+    .info {
+        margin: 0;
+    }
+    .one { order: 1;}
+    .two { order: 3;}
+    .three { order: 2;}
+    .four { order: 4;}
+    h3 { width: 500px;
+    margin-bottom: 31px;
+    }
+
+
+}
+
+
+@media (min-width:960px) { 
+    .sec1  {
+    max-width: 1400px;
+    }
+    .sec2  {
+        max-width: 1400px;
+        }
+    .main {
+       min-width: 960px;
+        max-width: 1100px;
+         
+            }
+
+
+}

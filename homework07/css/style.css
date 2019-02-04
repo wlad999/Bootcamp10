@@ -17,13 +17,8 @@
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/roboto-slab-v7-latin-700.eot'); /* IE9 Compat Modes */
-    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'),
-         url('../fonts/roboto-slab-v7-latin-700.eot?#iefix') format('embedded-opentype'), IE6-IE8
-         url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff2) format('woff2'), /* Super Modern Browsers */
-         url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff) format('woff'), /* Modern Browsers */
-         url('../fonts/roboto-slab-v7-latin-700.ttf') format('truetype'), Safari, Android, iOS
-         url('../fonts/roboto-slab-v7-latin-700.svg#RobotoSlab') format('svg'); /*Legacy iOS*/
+    src: url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff)
+        url(../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-700.woff2)
   }
   
 /* amita-regular - latin */
