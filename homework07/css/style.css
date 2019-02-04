@@ -7,13 +7,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.eot); /* IE9 Compat Modes */
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-         /* url('../fonts/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-         url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.woff2) format('woff2'), /* Super Modern Browsers */
-         url(../fonts/montserrat-v12-latin/montserrat-v12-latin-regular.woff) format('woff'), /* Modern Browsers */
-         /* url('../fonts/montserrat-v12-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
-         /* url('../fonts/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); Legacy iOS */
+    src: url(../fonts/montserrat-v12-latin/montserrat-v12-latin-900italic.woff;),
+        url(../fonts/montserrat-v12-latin/montserrat-v12-latin-900italic.woff2);
   }
 
 
@@ -36,13 +31,8 @@
     font-family: 'Amita';
     font-style: normal;
     font-weight: 400;
-    /* src: url('../fonts/amita-v4-latin/amita-v4-latin-regular.eot'); IE9 Compat Modes */
-    src: local('Amita Regular'), local('Amita-Regular'),
-         /* url('../fonts/amita-v4-latin/amita-v4-latin-regular.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-         url('../fonts/amita-v4-latin/amita-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         /* url(../fonts/amita-v4-latin/amita-v4-latin-regular.woff) format('woff'), Modern Browsers */
-         /* url('../fonts/amita-v4-lat?in/amita-v4-latin-regular.ttf') format('truetype'), Safari, Android, iOS */
-         url('../fonts/amita-v4-latin/amita-v4-latin-regular.svg#Amita') format('svg'); /*Legacy iOS*/
+   src: url(../fonts/amita-v4-latin/amita-v4-latin-regular.ttf),
+        url(../fonts/amita-v4-latin/amita-v4-latin-regular.woff);
   }
 
 
@@ -77,7 +67,7 @@ header {
 
 }
 .logo {
-font-family: 'Amita';
+font-family: 'Amita';  
 font-size: 26px;
 color: #fed136;
 text-align: left;
@@ -148,6 +138,7 @@ text-align: center;
     color: rgba(119, 119, 119, 255);
     text-align: center;
     position: relative;
+    z-index: 999;
 
 }
 .wrapper2 {
@@ -175,6 +166,8 @@ h6 {
     display: flex;
     justify-content: space-between;
     /* background-color: red; */
+    position: relative;
+    z-index: 9999;
 }
 form {
     display: flex;
@@ -228,8 +221,11 @@ input[type="text"]:invalid {outline: 2px solid red;}
     position: absolute;
     top: 118px;
     left: 788px;
+    z-index: 1;
+
 }
-input[type="message"] {width: 455px;
+textarea {width: 455px;
     height: 210px;
-text-align: 
+    
+    border-radius: 5px;
 }
