@@ -1,0 +1,16 @@
+
+.icon {
+    fill: blue;
+    background-color: brown;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+.icon:hover {
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    transition: all 1000ms ease;
+
+}

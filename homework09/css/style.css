@@ -1,6 +1,59 @@
-.backgr {
+*{ margin: 0;
+padding: 0;
+box-sizing: border-box;
+/* outline: 1px solid red; */
+
+}
+.container {
     background-position: center;
     background-size: cover;
-    background-image: url(../img/1/1200.png)
+    background-image: url(../img/1/1200.png);
+    padding-top: 21px;
+    padding-bottom: 234px;
+    /* width: 100vh; */
+      /* outline: 1px solid red; */
+   
+    
 }
+/* .box1 {margin: 0;} */
+/* p{margin: 0;} */
+.but1 {
+    width: 90px;
+    height: 36px;
+    border-radius: 1.5rem;
+   }
+/* p {line-height: 1rem;} */
+.but2 {
+    width: 280px;
+    height: 40px;
+    border-radius: 2rem;
+   }
+   .container1 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        position: relative;
+       
+        /* outline: 1px solid red; */
+       
+   }
+   img {
+       border-radius: 100%;
+       /* margin-top: 10px; */
+   }
+.box {
+    position: relative;
+    }
+   .logo {position: absolute;
+    /* width: 33px;
+    height: 33px; */
+    top: 89px;
+    left: 89px;
+    border: 2px solid white;
+    border-radius: 100%;
+    }
+.but3 {
+    width: 280px;
+    height: 40px;
+    border-radius: 2rem;
+   }
    
