@@ -69,7 +69,7 @@
 // console.log(
 //     Math.pow(2,4)
 //     );
- 
+
 
 // const name ='Mango';
 // console.log (name);
@@ -148,7 +148,7 @@
 
 // console.log(date); // 02\10\2017
 
-// // const date = day + "//\/\" + month + "\/\\/\" + year;
+// // const date = day + "\\" + month + "\\" + year;
 // ----------------------------------------------
 
 //----------------------------TASK 03-------------------------
@@ -218,7 +218,7 @@
   - Если что-то другое — показывать alert 'Но ведь на вдоре 2018!'
   
   PS: используйте конструкцию if..else.
-*/ 
+*/
 // let year = Number(prompt('Какой сейчас год?'));
 // if( year === 2019) {
 //   alert('Всё верно!')
@@ -440,7 +440,7 @@
   - Если посетитель вводит что либо другое — показывать alert 'Необходимо было ввести целое число!'
   
   PS: используйте конструкцию if..else.
-*/ 
+*/
 
 //  const num =Number(prompt('Введите произвольное целое число'));
 // console.log(num);
@@ -538,7 +538,7 @@
     3 - "Каталог отелей ***"
     4 - "Каталог отелей ****"
     5 - "Каталог лучших отелей"
-*/
+/*
 const num = Number(prompt('Введите номер отеля от 1го до 5ти'));
 if (num === 0) {
   alert('очень жаль, приходите еще!')
@@ -605,3 +605,154 @@ else if (num >0 && num <=5 && num !==NaN) {
   Если мест нигде нет, показать alert с сообщением 'Извините, столько мест нет ни в одной группе!'
 */
 
+
+
+
+
+// Работа в классе по первому модулю.
+
+// const inputName = prompt('How you are?');
+// let inputNameLower;
+// const father ='Igor';
+// const mother ='Ira';
+// const child ='Nikolay';
+
+// if (inputName); {
+//   inputNameLower =inputName.toLowerCase();
+//  }
+
+// if(inputNameLower === father.toLowerCase()
+//  || inputNameLower === mother.toLowerCase()
+//  || inputNameLower === child.toLowerCase() ) {
+//   alert ('Hello');
+//   } else {
+//     const guest = prompt ('How you need?') 
+//     if (guest.toLowerCase().includes(father.toLowerCase())) {
+//       alert('Его нету дома');    
+//     } else if (guest.toLowerCase().includes (mother.toLowerCase())){
+//       alert('Добро пожаловать, но без сюрпризов!');
+//     } else { alert ('Мерзавцы, я вызываю полицию!')}
+
+//     }
+// -тоже с помощью switch
+// const father ='Igor';
+// const mother ='Ira';
+// const child ='Nikolay';
+
+// const guest = prompt("Who are you?");
+// if (guest !== null){
+//   if (guest === father
+//   || guest === mother
+//   || guest === child )
+// {alert ('Welcom');
+// } else {
+//   const guest = promot('Who you need?'); 
+// switch(guest) {
+//   case guest === null:
+//   alert('dont worry')
+//   break;
+
+// case guest.includes(father):
+// alert('he is not home')
+// break;
+
+// case guest.includes(mother):
+// alert('be carful')
+// break;
+
+// case guest.includes(child):
+// alert('call 911')
+// break;
+
+// default:
+// alert('dont worry');
+//   }
+
+// }
+
+
+
+//  /*
+//  TASK 02
+//   Есть три переменные содержащие день, месяц, и год. 
+//   Необходимо получить строку день\месяц\год
+//   в формате xx\xx\xxxx
+
+//   Найдите ошибку в записи значания для переменной date, 
+//   результат будет выведен в консоль и равен комментарию 
+//   напротив console.log()
+// */
+
+// const day = 2;
+// const month = 10;
+// const year = 2017;
+
+// const date = '0'+ day + '\\' + month + "\\" + year;
+
+// console.log(date); // 02\10\2017
+//----------------------------------------------
+
+// TASK 03
+/* 
+  Напишите скрипт который:
+  - при загрузке страницы спрашивает имя пользователя (используйте prompt)
+//   - после того как было введено имя показывает alert с тем что ввели в prompt
+// */
+
+// const name = prompt('Enter your name');
+// alert(name);
+// -------------------------
+
+// TASK04
+/* 
+  Создайте срипт поиска отелей, где пользователь 
+  с помощью prompt должен ввести число от 1 до 5
+  
+  Проверить что пользователь ввел именно цифру от 1 до 5
+  
+  Если пользователь нажал Cancel, то вывести 
+  alert с текстом 'очень жаль, приходите еще!'
+  
+  Если было введено что либо кроме чисел 1-5, 
+  вывести alert с текстом 'Неверный ввод, возможные варианты 1-5!'
+  
+  Если же пользовател ввел валидное число, 
+  в зависимости от числа, используя switch, 
+  вывести alert с одной из строк:
+  
+    1 - "Каталог хостелов" 
+    2 - "Каталог бюджетных отелей"
+    3 - "Каталог отелей ***"
+    4 - "Каталог отелей ****"
+    5 - "Каталог лучших отелей"
+*/
+
+let inputUser = Number(prompt('Введите число от 1 до 5ти'));
+if (inputUser > 1 && inputUser <= 5 && !Number.isNaN(inputUser))
+  switch (inputUser) {
+    case 1:
+      alert("Каталог хостелов");
+      brake;
+
+    case 2:
+      alert("Каталог бюджетных отелей");
+      brake;
+
+    case 3:
+      alert("Каталог отелей ***");
+      brake;
+
+    case 4:
+      alert("Каталог отелей ****");
+      brake;
+
+    case 5:
+      alert("Каталог лучших отелей");
+      brake;
+
+  } else if (inputUser === 0) {
+    alert('Очень жаль приходите ещё')
+  }
+else {
+  alert('Неверный ввод возможны варианты 1-5')
+}
