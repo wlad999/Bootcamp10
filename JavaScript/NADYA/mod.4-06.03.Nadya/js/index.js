@@ -57,7 +57,7 @@ alert( isEmpty(schedule) ); // false
 //          max = salaries[key]
 //          name = key
 //    }
-   
+
 //    }
 //   return name 
 // }
@@ -95,7 +95,7 @@ alert( isEmpty(schedule) ); // false
 // function isNumeric(n) {
 //   return !isNaN(parseFloat(n)) && isFinite(n)
 // }
-
+// ---------------------------------------------------------
 
 // function multiplyNumeric(menu, ppp){
 //    for(let key in menu){
@@ -107,3 +107,74 @@ alert( isEmpty(schedule) ); // false
 // return menu
 // }
 // console.log (multiplyNumeric(menu, isNumeric));
+
+
+// =============================================================
+
+/*Задание 10 Найти последовательность Хэеса, то есть пользователь вводит число и в результате должно быть выдано сообщение, с самой последовательностью, количеством шагов,
+которое понадобилось для нахождения этой последовательности, и вершиной последовательности, это максимальное число из этой последовательности. Последовательность
+Хэеса считается так: если ввели число 9, то проверяем его, если оно чётное, делим на 2, если нечетное, умножаем на 3 и прибавляем 1, и так до тех пор пока число не
+будет равно 1.*/
+
+function num(a) {
+   let i=0;
+   let max =0;
+   do { 
+      if (a % 2 === 0) {
+         a = a / 2;
+      } else {
+         a = a * 3 + 1;
+         if(max<a){max = a};
+      }
+      i=i+1;
+      console.log(a);
+   } while (a !== 1);
+   return `max number:${max} quantity of cycles:${i}`;
+}
+console.log(num(prompt('Введите число')));
+
+/*
+/*9*3+1=28
+28/2=14
+14/2=7
+7*3+1=22
+22/2=11
+11*3+1=34
+34/2=17
+17*3+1=52
+52/2=26
+26/2=13
+13*3+1=40
+40/2=20
+20/2=10
+10/2=5
+5*3+1=16
+16/2=8
+8/2=4
+4/2=2
+2/2=1
+*/
+// -----------------------RODIK-------------------------------------------
+// let num =Number(prompt("enter odd number"));
+// let res = 0;
+// let arr = [];
+// const countNum = function(num){
+// while(num !== 1 || num === 0){
+//     if(num % 2 === 0){
+//       num = num / 2;
+//     }else if( num === 0){
+//         break;
+//     }
+//     else {
+//       num =  num *3 + 1;
+//     }
+//     arr.push(num)
+// }
+// for(let i of arr){
+//     arr[i]>res?res=arr[i]:null;
+// }
+//  return(`How many iteration - ${arr.length}, Max num - ${res} ,  Result - ${num}`);
+// }
+
+// console.log(countNum(num))
+// 

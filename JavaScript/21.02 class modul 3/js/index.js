@@ -262,7 +262,7 @@
 const filterFromArray = (...arr) => {
     const newArr = arr[0];
     console.log(arr);
-    console.log(newArr);
+    // console.log(newArr);
 }
 
 // Вызовы функции для проверки
