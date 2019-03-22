@@ -8,8 +8,8 @@
 // console.log(users.length);
 // console.log(users);
 // console.log(users[5]); 
-// ==========================================================
-// // -----------переопределение элементов массива-----------------------
+// // /*==========================================================*/
+// // // -----------переопределение элементов массива-----------------------
 // users[5] ='Chelsey';
 // console.log('users arr', users);
 // console.log('users.length', users.length);
@@ -52,7 +52,7 @@
 //-------метод (includes)--- проверить есть элемент или нет---
 // const users = ['Mango', 'Ajax', 'Poly'];
 // const userInput = prompt('давай имя');
-// const idx = users.indexOf ('Ajax');
+// const idx = users.includes (userInput);
 // console.log(idx);
 // ----------------------------------------
 //  PUSH POP добавляем, элемениы массива
@@ -167,9 +167,8 @@
 
 // ---ПРоверка Миссив-не массив
 // const x = [1, 2, 3];
-// Arrey
-// console.log(typeof x);
-// console.log(Arrey.isArrat (x));
+// console.log(typeof (x));
+// console.log(Array.isArray (x));
 // --------------------------------
 // -----------Деструктуризация массива- создаём переменные из массива----------------
 
@@ -177,7 +176,7 @@
 // const first = clients [0];
 // const second = clients [1];
 // const third = clients [2];
-// const fourth = clients [3] || 'user name;
+// const fourth = clients [3] || 'user name';
 
 // const [first, second, third, fourth ] = ['Mango', 'Poly', 'Ajax']
 //  или 
@@ -250,7 +249,7 @@
 // /* Используя методы массива, последовательно выполнить следующие операции */
 
 // // Удалить из начала массива нулевой элемент
-// console.log(users.shift() ); // ["Poly", "Ajax", "Chelsey"]
+// console.log(users.shift() ); // Mango
 // console.log(users); // ["Poly", "Ajax", "Chelsey"]
 
 // // Удалить из конца массив последний элемент
@@ -265,6 +264,7 @@
 // users.push('one', 'two');
 // console.log(users); //  ["добавленое ранее имя", "Poly", "Ajax", "имя 1", "имя 2"]
 //===========================================================
+
 
 //-------------------TASK03-------------------------
 /*
@@ -369,10 +369,10 @@
 // // // Используя цикл вычисли сколько будет стоить гравировка и запиши результат в переменную price
 // let cost =10;
 // price = words.length*cost;
-// // console.log(price); // 80
+// console.log(price); // 80
 
 // for(let i=1; i<=words.length; i=i+1){
-//     price=i*cost;
+//     price= price + cost;
 //   }
 // console.log(price);
 // ==========================================================
@@ -477,17 +477,17 @@
 
 // const numbers = [12, 15, 25, 37, 41, 62, 74, 83];
 // let num;
-// do{ 
-//   let num = Number( prompt ( `Enter number from ${numbers[0]} till ${numbers[numbers.length-1]}`));
+// do {
+//   let num = Number(prompt(`Enter number from ${numbers[0]} till ${numbers[numbers.length-1]}`));
 
-//  if(numbers.includes(num)){
-//   alert('Поздравляем, Вы угадали!');
-//   console.log(numbers.includes(num));
-// } else {
-//   alert('Сожалеем, Вы не угадали!');
-//   console.log(numbers.includes(num));
-// }
-// } while ( !numbers.includes(num) )
+//   if (numbers.includes(num)) {
+//     alert('Поздравляем, Вы угадали!');
+//     // console.log(numbers.includes(num));
+//   } else {
+//     alert('Сожалеем, Вы не угадали!');
+//  }
+// } while (!numbers.includes(num));
+
 // ==========================================================
 // ------------------TASK 08--------------------
 /*
@@ -557,5 +557,3 @@
 // }
 // console.log(num)
 // } while (num!==0);
-
-

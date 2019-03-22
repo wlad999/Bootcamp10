@@ -12,22 +12,19 @@
 // const num =5;
 // const type = typeof true;
 // console.log( type);
+
 // const userName = 'Mango';
-
-
 // alert('Hello ' + userName);
 
 
 // const userAge = prompt('enter your age!', 18);
-
-
-
 // console.log ( userAge);
 // console.log(typeof userAge);
 
 
 // const going = confirm ('do you want?');
 // console.log(typeof going);
+// console.log(going);
 
 // const x = 10;
 // const y = 5;
@@ -42,21 +39,21 @@
 // console.log( 7 < 3); 
 
 // const str = Number('5arg');
-
 // console.log(typeof str);
+// console.log(str);
 
 // const age =  Number(prompt ('get age', ''));
 // console.log(age);
 // console.log(Number.isNaN(age) );
 // console.log( typeof age === 'number');
-// // console.log(1 == true)
+// console.log(1 == true)
 
 // const margin ='15.4px';
 // console.log( Number.parseFloat(margin));
-// console.log(Number.parseInt(age))
+// console.log( Number.parseInt(margin));
 
 
-// -----сложение дробніх чисед
+// -----сложение дробных чисел
 // console.log(0.17+0.24);
 // const a = 0.17;
 // const b = 0.25;
@@ -64,7 +61,7 @@
 // console.log(value);
 
 
-// console.log (Number(parseInt(Math.random()*10)));
+// console.log ( Number(parseInt(Math.random()*10)));
 
 // console.log(
 //     Math.pow(2,4)

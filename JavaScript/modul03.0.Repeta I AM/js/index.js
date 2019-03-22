@@ -254,3 +254,16 @@
 //   filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)
 // ); // [12, 8, 17]
 // ====================================================
+// Пример перебора неограниченного набора аргументов и нахождения их суммы
+// const sum = function() {
+//   const max = arguments.length;
+//   let total = 0;
+
+//   for (let i = 0; i < max; i += 1) {
+//     total += arguments[i];
+//   }
+
+//   return total;
+// };
+
+// console.log(`sum = ${sum(1, 2, 3, 4, 5)}`); // "sum = 15"

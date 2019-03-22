@@ -116,22 +116,22 @@ alert( isEmpty(schedule) ); // false
 Хэеса считается так: если ввели число 9, то проверяем его, если оно чётное, делим на 2, если нечетное, умножаем на 3 и прибавляем 1, и так до тех пор пока число не
 будет равно 1.*/
 
-function num(a) {
-   let i=0;
-   let max =0;
-   do { 
-      if (a % 2 === 0) {
-         a = a / 2;
-      } else {
-         a = a * 3 + 1;
-         if(max<a){max = a};
-      }
-      i=i+1;
-      console.log(a);
-   } while (a !== 1);
-   return `max number:${max} quantity of cycles:${i}`;
-}
-console.log(num(prompt('Введите число')));
+// function num(a) {
+//    let i=0;
+//    let max =0;
+//    do { 
+//       if (a % 2 === 0) {
+//          a = a / 2;
+//       } else {
+//          a = a * 3 + 1;
+//          if(max<a){max = a};
+//       }
+//       i=i+1;
+//       console.log(a);
+//    } while (a !== 1);
+//    return `max number:${max} quantity of cycles:${i}`;
+// }
+// console.log(num(prompt('Введите число')));
 
 /*
 /*9*3+1=28
