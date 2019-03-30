@@ -90,7 +90,7 @@
 // -------------------TASK03-----------------------
 /*
  * Напиши класс Car с указанными свойствами и методами
-// // */
+// // // */
 // const Car = function({maxSpeed}){
 //   this.speed = 0;
 //   this.maxSpeed = maxSpeed;
@@ -99,67 +99,67 @@
 
 // }
 
-// // class Car {
-// //   constructor({ maxSpeed = 0 }) {
-// //     /*
-// //       Добавь свойства:
-// //         - speed - для отслеживания текущей скорости, изначально 0.
-// //         - maxSpeed - для хранения максимальной скорости 
-// //         - running - для отслеживания заведен ли автомобиль, возможные значения true или false. Изначально false.
-// //         - distance - содержит общий киллометраж, изначально с 0
-// //     */
-// //   }
-
-//   Car.prototype.turnOn = function() {
-//     return this.running = true; 
-//     // Добавь код для того чтобы завести автомобиль
-//     // Просто записывает в свойство running значание true
+// class Car {
+//   constructor({ maxSpeed = 0 }) {
+//     /*
+//       Добавь свойства:
+//         - speed - для отслеживания текущей скорости, изначально 0.
+//         - maxSpeed - для хранения максимальной скорости 
+//         - running - для отслеживания заведен ли автомобиль, возможные значения true или false. Изначально false.
+//         - distance - содержит общий киллометраж, изначально с 0
+//     */
 //   }
 
-//   Car.prototype.turnOff = function() {
+  // Car.prototype.turnOn = function() {
+  //   return this.running = true; 
+  //   // Добавь код для того чтобы завести автомобиль
+  //   // Просто записывает в свойство running значание true
+  // }
 
-//     return this.running = false;
-//     // Добавь код для того чтобы заглушить автомобиль
-//     // Просто записывает в свойство running значание false
-//   }
+  // Car.prototype.turnOff = function() {
 
-//   Car.prototype.accelerate = function(spd) {
-//     if(spd <= this.maxSpeed ){
-//       return this.speed =spd;
-//     } else {
-//       return 'Too fast - you guilty';
-//     }
+  //   return this.running = false;
+  //   // Добавь код для того чтобы заглушить автомобиль
+  //   // Просто записывает в свойство running значание false
+  // }
+
+  // Car.prototype.accelerate = function(spd) {
+  //   if(spd <= this.maxSpeed ){
+  //     return this.speed =spd;
+  //   } else {
+  //     return 'Too fast - you guilty';
+  //   }
     
-//     // Записывает в поле speed полученное значение, при условии что
-//     // оно не больше чем значение свойства maxSpeed
-//   }
+  //   // Записывает в поле speed полученное значение, при условии что
+  //   // оно не больше чем значение свойства maxSpeed
+  // }
 
-//   Car.prototype.decelerate = function(spd) {
-//     if( spd <= this.maxSpeed && spd > 0){
-//       return this.speed = spd
-//     }
+  // Car.prototype.decelerate = function(spd) {
+  //   if( spd <= this.maxSpeed && spd > 0){
+  //     return this.speed = spd
+  //   }
   
-//     // Записывает в поле speed полученное значение, при условии что
-//     // оно не больше чем значение свойства maxSpeed и не меньше нуля
-//   }
+  //   // Записывает в поле speed полученное значение, при условии что
+  //   // оно не больше чем значение свойства maxSpeed и не меньше нуля
+  // }
 
-//   Car.prototype.drive = function(hours) {
-//     if(this.turnOn){
-//     return this.distance = (hours * this.speed)
-//   }
+  // Car.prototype.drive = function(hours) {
+  //   if(this.turnOn){
+  //   return this.distance = (hours * this.speed)
+  // }
     
-//     // Добавляет в поле distance киллометраж (hours умноженное на значение поля speed),
-//     // но только в том случае если машина заведена!
-//   }
+  //   // Добавляет в поле distance киллометраж (hours умноженное на значение поля speed),
+  //   // но только в том случае если машина заведена!
+  // }
 
 
-// const car = new Car({ maxSpeed: 100 });
+// // const car = new Car({ maxSpeed: 100 });
 // console.log (`Turn on the car`, car.turnOn());
 // console.log (`Change speed`, car.accelerate(50));
 // console.log (`Change speed`, car.accelerate(140));
 // console.log (`Your distance`, car.drive(2));
 // console.log (`Change speed`, car.decelerate(50));
-// // console.log (`Turn off the car`, car.turnOff());
+// console.log (`Turn off the car`, car.turnOff());
 
 // // ==========================================================================================
 // // -------------------TASK 04--- смотреть с 03(раскоментить 03)------------
@@ -170,10 +170,10 @@
 // */
 
 
-// // const car = new Car({ maxSpeed: 100 });
-// // car.turnOn();
-// // car.accelerate(50);
-// // car.drive(2);
+// const car = new Car({ maxSpeed: 100 });
+// car.turnOn();
+// car.accelerate(50);
+// car.drive(2);
 // Car.prototype.getSpecs = function(car){
 // console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, running: ${car.running}, dustance: ${car.distance}`);
 // }

@@ -706,17 +706,23 @@ let uniq=[];
 //     uniq.push(x);
 //   }})
 //   return uniq;
-// // };
+// };
+// const getAllSkills = (arr) =>
+//   arr.reduce((acc, val) => acc.concat(val['skills']), [])
+//   .reduce((accc, item)=>{
+//   if(!accc.includes(item)){
+//     accc.push(item), []
+//   }})
 const getAllSkills = (arr) =>
-  arr.reduce((acc, val) => acc.concat(val['skills']), [])
-  .reduce((accc, item)=>{
-  if(!accc.includes(item)){
-    accc.concat(item), []
+  arr.reduce((acc, val) => acc.concat(val['skills']), []);
+  const getAll = getAllSkills.reduce((accc, item)=>{
+  if(!accc.push(item)){
+    accc.push(item), []
   }})
   
 
 console.log(getAllSkills(users))
-// console.log(uniq.sort());
+console.log(uniq.sort());
 
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 

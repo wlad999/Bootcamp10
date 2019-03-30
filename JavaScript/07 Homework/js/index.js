@@ -202,38 +202,38 @@ createMovieCard();
       на 10px
 */
 // createBoxes(3);
-// function randomColor(){
-//   let result = '';
-//   let max = 255;
-//   let a = Math.floor(Math.random()*(255+1));
-//   let b = Math.floor(Math.random()*(255+1));
-//   let c = Math.floor(Math.random()*(255+1));
+function randomColor(){
+  let result = '';
+  let max = 255;
+  let a = Math.floor(Math.random()*(255+1));
+  let b = Math.floor(Math.random()*(255+1));
+  let c = Math.floor(Math.random()*(255+1));
 
-//   return result = `rgba(${a}, ${b}, ${c})`;
-// }
+  return result = `rgba(${a}, ${b}, ${c})`;
+}
 
-// function createBoxes(num) {
-//   let container = document.createElement('div');
-//   let mainDiv = document.querySelector('#root');
-//   let i =1;
-//   let width =30;
-//   let height =30;
+function createBoxes(num) {
+  // let container = document.createElement('div');
+  let mainDiv = document.querySelector('#root');
+  let i =1;
+  let width =30;
+  let height =30;
 
-//   do{
-//     let divs = document.createElement('div');
-//     divs.style.backgroundColor = randomColor();
-//     divs.style.width = width +'px';
-//     divs.style.height = height +'px';
-//     mainDiv.append(divs);
-//     i++;
-//     width += 10;
-//     height += 10;
+  do{
+    let divs = document.createElement('div');
+    divs.style.backgroundColor = randomColor();
+    divs.style.width = width +'px';
+    divs.style.height = height +'px';
+    mainDiv.append(divs);
+    i++;
+    width += 10;
+    height += 10;
 
-//   } while(i<=num);
-//  };
+  } while(i<=num);
+ };
 
 //------------------------------------
-// let userInput = +prompt("Enter a number");
+let userInput = createBoxes(+prompt("Enter a number"));
 
 // function randomColor() {
 //     let result = '';
@@ -305,35 +305,35 @@ createMovieCard();
   3. Повесьте все посты в какой-то уже существующий DOM-узел.
 */
 
-const posts = [
-  {
-    img: "https://placeimg.com/400/150/arch",
-    title: "Post title 1",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-    link: 'link-1.com'
-  },
-  {
-    img: "https://placeimg.com/400/150/nature",
-    title: "Post title 2",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-    link: 'link-2.com'
-  },
-  {
-    img: "https://placeimg.com/400/150/arch",
-    title: "Post title 3",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-    link: 'link-3.com'
-  }
-];
+// const posts = [
+//   {
+//     img: "https://placeimg.com/400/150/arch",
+//     title: "Post title 1",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//     link: 'link-1.com'
+//   },
+//   {
+//     img: "https://placeimg.com/400/150/nature",
+//     title: "Post title 2",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//     link: 'link-2.com'
+//   },
+//   {
+//     img: "https://placeimg.com/400/150/arch",
+//     title: "Post title 3",
+//     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//     link: 'link-3.com'
+//   }
+// ];
 
-function createCards(array){
-  for(let item of array){
-    createPostCard(item)
-  }
-}
-function createPostCard(post){
-  let card = document.querySelector('#root');
-  card.innerHTML += `<img src = '${post.img}'><h2>${post.title}</h2><p>${post.text}</p><a href ='${post.link}'>${post.link}</a>` 
-}
+// function createCards(array){
+//   for(let item of array){
+//     createPostCard(item)
+//   }
+// }
+// function createPostCard(post){
+//   let card = document.querySelector('#root');
+//   card.innerHTML += `<img src = '${post.img}'><h2>${post.title}</h2><p>${post.text}</p><a href ='${post.link}'>${post.link}</a>` 
+// }
 
-createCards(posts)
+// createCards(posts)

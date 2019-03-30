@@ -130,32 +130,32 @@ movie.innerHTML='<img class="movie__image" src="http://image.tmdb.org/t/p/w500/r
 createMovieCard();
 // =========Long once=============================
 */
-// function createMovieCard() {
-//   let movie = document.querySelector('.movie');
-//   let elem = document.createElement('img');
-//   elem.classList.add('movie__image');
-//   elem.src = 'http://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg';
-//   elem.alt = 'movie image';
+function createMovieCard() {
+  let movie = document.querySelector('.movie');
+  let elem = document.createElement('img');
+  elem.classList.add('movie__image');
+  elem.src = 'http://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg';
+  elem.alt = 'movie image';
 
-//   let elemTextContainer = document.createElement('div');
-//   let textMain = document.createElement('h2');
-//   textMain.classList.add('movie__title')
-//   let textP1 = document.createElement('p');
-//   textP1.classList.add('movie__description')
-//   let textP2 = document.createElement('p');
-//   textP2.classList.add('movie__date')
-//   let textP3 = document.createElement('p');
-//   textP3.classList.add('movie__rating');
+  let elemTextContainer = document.createElement('div');
+  let textMain = document.createElement('h2');
+  textMain.classList.add('movie__title')
+  let textP1 = document.createElement('p');
+  textP1.classList.add('movie__description')
+  let textP2 = document.createElement('p');
+  textP2.classList.add('movie__date')
+  let textP3 = document.createElement('p');
+  textP3.classList.add('movie__rating');
 
-//   textMain.textContent = 'The Godfather';
-//   textP1.textContent = 'Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.';
-//   textP2.textContent = 'Released: 1972-03-14';
-//   textP3.textContent = 'Rating: 8.6';
-//   elemTextContainer.append(textMain, textP1, textP2, textP3);
-//   movie.append(elem, elemTextContainer);
+  textMain.textContent = 'The Godfather';
+  textP1.textContent = 'Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.';
+  textP2.textContent = 'Released: 1972-03-14';
+  textP3.textContent = 'Rating: 8.6';
+  elemTextContainer.append(textMain, textP1, textP2, textP3);
+  movie.append(elem, elemTextContainer);
 
-// }
-// createMovieCard();
+}
+createMovieCard();
 // ===================================================
 // -------------------My work ---------------
 // function createMovieCard(){
@@ -201,36 +201,36 @@ createMovieCard();
     - Каждый следующий div после первого, должен быть шире и выше предыдущего
       на 10px
 */
-createBoxes(3);
-function randomColor(){
-  let result = '';
-  let max = 255;
-  let a = Math.floor(Math.random()*(255+1));
-  let b = Math.floor(Math.random()*(255+1));
-  let c = Math.floor(Math.random()*(255+1));
+// createBoxes(3);
+// function randomColor(){
+//   let result = '';
+//   let max = 255;
+//   let a = Math.floor(Math.random()*(255+1));
+//   let b = Math.floor(Math.random()*(255+1));
+//   let c = Math.floor(Math.random()*(255+1));
 
-  return result = `rgba(${a}, ${b}, ${c})`;
-}
+//   return result = `rgba(${a}, ${b}, ${c})`;
+// }
 
-function createBoxes(num) {
-  let container = document.createElement('div');
-  let mainDiv = document.querySelector('#root');
-  let i =1;
-  let width =30;
-  let height =30;
+// function createBoxes(num) {
+//   let container = document.createElement('div');
+//   let mainDiv = document.querySelector('#root');
+//   let i =1;
+//   let width =30;
+//   let height =30;
 
-  do{
-    let divs = document.createElement('div');
-    divs.style.backgroundColor = randomColor();
-    divs.style.width = width +'px';
-    divs.style.height = height +'px';
-    mainDiv.append(divs);
-    i++;
-    width += 10;
-    height += 10;
+//   do{
+//     let divs = document.createElement('div');
+//     divs.style.backgroundColor = randomColor();
+//     divs.style.width = width +'px';
+//     divs.style.height = height +'px';
+//     mainDiv.append(divs);
+//     i++;
+//     width += 10;
+//     height += 10;
 
-  } while(i<=num);
- };
+//   } while(i<=num);
+//  };
 
 //------------------------------------
 // let userInput = +prompt("Enter a number");
