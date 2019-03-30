@@ -35,40 +35,39 @@ const posts = [
 ];
 // ----------------------1 Var----------------------
 
-function createMovieCard(el){
+// function createMovieCard(el){
 
-  let movie = document.querySelector('.movie');
-  let elem = document.createElement('img');
-  elem.classList.add('movie__image');
-  elem.src=el.img;
-  elem.alt="movie image";
-  console.log(elem);
+//   let movie = document.querySelector('.movie');
+//   let elem = document.createElement('img');
+//   elem.classList.add('movie__image');
+//   elem.src=el.img;
+//   elem.alt="movie image";
+//   console.log(elem);
   
   
-  let textContainer = document.createElement('div');
-  textContainer.classList.add("movie__body");
-  console.log(textContainer);
+//   let textContainer = document.createElement('div');
+//   textContainer.classList.add("movie__body");
+//   console.log(textContainer);
   
-  let h2 = document.createElement('h2');
-  h2.classList.add("movie__title");
-  h2.textContent = el.title;
-  console.log(h2);
+//   let h2 = document.createElement('h2');
+//   h2.classList.add("movie__title");
+//   h2.textContent = el.title;
+//   console.log(h2);
   
-  let p = document.createElement('p');
-  p.classList.add("movie__description");
-  p.textContent = el.text;
-  console.log(p);
+//   let p = document.createElement('p');
+//   p.classList.add("movie__description");
+//   p.textContent = el.text;
+//   console.log(p);
   
-  let p1 = document.createElement('p');
-  p1.classList.add("movie__date");
-  p1.textContent=el.link;
-  console.log(p1);
+//   let p1 = document.createElement('p');
+//   p1.classList.add("movie__date");
+//   p1.textContent=el.link;
+//   console.log(p1);
   
   
-  textContainer.append(elem, h2, p, p1);
-  /*movie.append - для первого варианта */
+//   textContainer.append(elem, h2, p, p1);
   //  movie.append(textContainer);
-  }
+  // }
   
   // function createCards(posts){
   //   posts.forEach(el => {
@@ -82,7 +81,7 @@ function createMovieCard(el){
      const markup = posts.reduce((acc, post)=> acc + `<img src = '${post.img}'><h2>${post.title}</h2><p>${post.text}</p><a href ='${post.link}'>${post.link}</a>`, '');
      let movie = document.querySelector('.movie');
      movie.innerHTML=markup;
-    // movie.insertAdjacentHTML('beforeend', markup);
+    /* movie.insertAdjacentHTML('beforeend', markup);*/
     /*
     Этот вариант вставляет просто стороку!!!!
     movie.append(markup);*/
