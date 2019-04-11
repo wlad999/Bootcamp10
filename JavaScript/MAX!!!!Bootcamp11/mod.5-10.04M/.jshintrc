@@ -1,0 +1,6 @@
+{
+    "eversion": 6,
+    "devel": true,
+    "node": true,
+    "browser": true
+}
