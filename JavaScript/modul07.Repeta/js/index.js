@@ -420,48 +420,45 @@ function createMovieCard(el){
   p1.textContent=el.link;
   console.log(p1);
   
-  // let p2 = document.createElement('p');
-  // p2.classList.add('"movie__rating"');
-  // p2.textContent = 'Rating: 8.6';
-  // console.log(p2);
+  let p2 = document.createElement('p');
+  p2.classList.add('"movie__rating"');
+  p2.textContent = 'Rating: 8.6';
+  console.log(p2);
   
   
   
-  // textContainer.append(elem, h2, p, p1);
+  textContainer.append(elem, h2, p, p1);
+  movie.append(textContainer);
   return textContainer;
-  console.log(textContainer);
-  
-  // movie.append(textContainer);
   
   }
-  // createMovieCard();
-
+  createMovieCard();
+// --------------------------------------------
   // function createCards(posts){
   //   posts.forEach(el => {
   //     createMovieCard(el)
   //   });
   // };
-  
-  function createCards(posts){
-    posts.reduce((string, el) => {
-      string + `${createMovieCard(el)}`, '';
-      return string;
-      console.log(string)
-    });
-  };
-    createCards(posts)
+  // -----------------------------------------------
+  // function createCards(posts){
+  //   posts.reduce((string, el) => {
+  //     string + `${createMovieCard(el)}`, '';
+  //     return string;
+  //     });
+  // };
+  //   createCards(posts)
   // movie.append(createCards);
-
+// -------------------------------------------------------
   // const markup = elements.reduce(
     //   (string, item) => string + `<li>${item}</li>`,
     //   ""
     // );
     // console.log(markup)
     // list.innerHTML=markup
-
-    const markup = posts.reduce((acc, post)=> acc + `<img src = '${post.img}'><h2>${post.title}</h2><p>${post.text}</p><a href ='${post.link}'>${post.link}</a>`, '');
-     console.log(markup);
-     let movie = document.querySelector('.movie');
-     movie.innerHTML=markup;
-    
+// -----------------------------------------------------------------------------------
+    // const markup = posts.reduce((acc, post)=> acc + `<img src = '${post.img}'><h2>${post.title}</h2><p>${post.text}</p><a href ='${post.link}'>${post.link}</a>`, '');
+    //  console.log(markup);
+    //  let movie = document.querySelector('.movie');
+    //  movie.innerHTML=markup;
+// ------------------------------------------------------------ 
     
