@@ -278,7 +278,7 @@ body {
 } */
 /* ============================================= */
 /* ----------------TASK 09------------------------- */
-* {
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -420,6 +420,39 @@ body {
   line-height: 42px;
   cursor: pointer;
   font-family: inherit;
-}
+} */
 /* ====================================================== */
 /* ----------------------TASK 10---------------------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 50px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 20px 25px;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #212121;
+  transition: background-color 0.1s linear;
+}
+
+.menu-link.active {
+  background-color: #ff4081;
+  color: #ffffff;
+}
+/* ================================================ */

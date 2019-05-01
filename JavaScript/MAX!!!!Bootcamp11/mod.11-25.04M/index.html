@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>modul-01</title>
+</head>
+
+<body>
+
+  <div class="list"></div>
+  <template id="box"> 
+    {{#each this}}
+    {{#if done}}
+    <!--#each - хелпер помогает перебирать  -->
+    <img src="{{img}}" alt="" height='200px' >
+    <h1 class="name">name:{{name}}</h1>
+    <p class="about">about:{{about}}</p>
+    <p class="work">work:{{work}}</p>
+    {{/if}}
+    {{/each}}
+  </template>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <script src="./js/index.js"></script>
+</body>
+
+</html>
