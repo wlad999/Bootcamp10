@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  background: red;
+  color: #fff;
+  padding: 20px;
+
+}
+
+.header span {
+  font-size: 40px;
+
+}
+
+.headerlogged {
+  background: aqua;
+  border: 1px solid #777
+}
