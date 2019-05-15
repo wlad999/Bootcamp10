@@ -45,13 +45,14 @@ class App extends Component {
     //   count: this.state.count + 1,
     // });
 
-    /*второй вариатн записи */
+    /* второй вариатн записи */
     this.setState(prevState => {
       return {
         count: prevState.count + 1,
       };
     });
   };
+
   onDecrement = () => {
     if (this.state.count > 0)
       this.setState({
@@ -74,7 +75,7 @@ class App extends Component {
       logoTitle,
       count,
       users,
-    } = this.state; /*деструктуризируем весь обїект */
+    } = this.state; /* деструктуризируем весь обїект */
 
     return (
       <>
@@ -87,7 +88,7 @@ class App extends Component {
         />
         <ul>
           {users.length > 0 &&
-            users.map(user => <UserCard key={user.id} {...user} />)}
+            users.map(el => <UserCard key={el.id} {...el} />)}
         </ul>
         <HomeWork1 {...user} />
         <Stats stats={stats} />
