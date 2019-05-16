@@ -11,13 +11,15 @@ class MoviePage extends Component {
   }
 
   onChange = e => {
-    const { muvies } = this.state;
+    const { movies } = this.props;
     console.log(e.target.value);
     const regExp = new RegExp(e.target.value, 'gi');
-    console.log('ttt', regExp.test('ttt'));
+    // console.log('ttt', regExp.test('ttt'));
+
     // filter element and find matches with regExp
-    const newMuvies = muvies;
-    this.setState({ muvies: newMuvies });
+    const newMuvies = movies.filter(el => regExp.test(el.title));
+    console.log(newMuvies);
+    this.setState({ movies: newMuvies });
   };
 
   render() {
