@@ -8,8 +8,8 @@ const Counter = ({ count, items }) => (
   </p>
 );
 Counter.propTypes = {
-  count: PropTypes.string.isRequired,
-  items: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default Counter;

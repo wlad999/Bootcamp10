@@ -54,5 +54,13 @@ class Reader extends Component {
     );
   }
 }
+Reader.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      text: PropTypes.string,
+    }),
+  ).isRequired,
+};
 
 export default Reader;
