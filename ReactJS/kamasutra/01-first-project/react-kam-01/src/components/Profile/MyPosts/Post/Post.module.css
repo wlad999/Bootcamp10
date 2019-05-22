@@ -1,0 +1,13 @@
+.content {
+  grid-area: c;
+  background-color: aqua
+}
+
+.item {
+  color: red
+}
+
+.item img {
+  width: 100px;
+  border-radius: 50%;
+}

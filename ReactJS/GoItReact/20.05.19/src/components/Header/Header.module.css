@@ -1,0 +1,19 @@
+.header {
+  background: aqua;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  font-size: 20px;
+
+}
+
+.linkActive {
+  color: greenyellow;
+}

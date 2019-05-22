@@ -4,11 +4,11 @@ import styles from './Counter.module.css';
 
 const Counter = ({ count, onIncrement, onDecrement }) => (
   <div>
-    <button onClick={onDecrement} className={styles.btn}>
+    <button onClick={onDecrement} className={styles.btn} type="button">
       -
     </button>
     <span>{count}</span>
-    <button onClick={onIncrement} className={styles.btn}>
+    <button onClick={onIncrement} className={styles.btn} type="button">
       +
     </button>
   </div>
