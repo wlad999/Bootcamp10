@@ -3,9 +3,9 @@
   width: 1250px;
   margin: 0 auto;
 
-grid-template-areas:
-'h h'
-'n c';
+  grid-template-areas:
+    'h h'
+    'n c';
 
 
   grid-template-rows: 60px 1fr;
@@ -14,3 +14,8 @@ grid-template-areas:
 
 }
 
+.app-wrapper-content {
+
+  grid-area: c;
+  background-color: aqua
+}
