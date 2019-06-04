@@ -6,8 +6,8 @@ const MyPosts = props => {
   let posts = [
     { id: 1, likesCount: 5, message: 'How are you?' },
     { id: 2, likesCount: 7, message: "it's my first post" },
-    { id: 3, likesCount: 3, message: 'Realy&' },
-    { id: 4, likesCount: 15, message: 'Cool' },
+    { id: 3, likesCount: 3, message: 'Realy?' },
+    { id: 4, likesCount: 15, message: 'Cool!' },
   ];
 
   let postsElements = posts.map(p => (
