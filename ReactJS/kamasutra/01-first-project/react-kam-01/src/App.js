@@ -45,7 +45,7 @@ const App = props => {
       {/*подключаем тег <BrowserRouter>*/}
       <div className="app-wrapper">
         <Header />
-        <NavBar />
+        <NavBar state={props.state.sideBar} />
         <div className="app-wrapper-content">
           {/* <Route path="/Dialogs" component={Dialogs} />
           <Route path="/Profile" component={Profile} /> */}
