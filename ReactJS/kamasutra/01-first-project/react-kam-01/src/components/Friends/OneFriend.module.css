@@ -19,5 +19,7 @@
 }
 
 .fr {
-  text-align: center
+  text-align: center;
+  padding-top: 15px;
+  margin: 5px;
 }

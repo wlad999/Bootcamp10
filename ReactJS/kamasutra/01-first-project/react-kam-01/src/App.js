@@ -7,10 +7,8 @@ import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import Music from './components/Music/Music';
-import {
-  BrowserRouter,
-  Route,
-} from 'react-router-dom'; /*подключаем router.всталяем тег <BrowserRouter>*/
+import { Route } from 'react-router-dom';
+// /*подключаем router.всталяем тег <BrowserRouter>*/- перенесли его в index.js
 
 // let dialogs = [
 //   { id: 1, name: 'Vlad' },
@@ -37,37 +35,38 @@ import {
 //   { id: 4, likesCount: 15, message: 'Cool!' },
 // ];
 const App = props => {
-  // console.log('App props', props);
+  console.log('addPost -App', props.addPost);
 
   return (
-    <BrowserRouter>
-      {' '}
-      {/*подключаем тег <BrowserRouter>*/}
-      <div className="app-wrapper">
-        <Header />
-        <NavBar state={props.state.sideBar} />
-        <div className="app-wrapper-content">
-          {/* <Route path="/Dialogs" component={Dialogs} />
+    // <BrowserRouter>
+    /*подключаем тег <BrowserRouter>*/
+    <div className="app-wrapper">
+      <Header />
+      <NavBar state={props.state.sideBar} />
+      <div className="app-wrapper-content">
+        {/* <Route path="/Dialogs" component={Dialogs} />
           <Route path="/Profile" component={Profile} /> */}
-          {/* при совпадении пути path="/Profile" -  Route вызывает component={Profile}. 
+        {/* при совпадении пути path="/Profile" -  Route вызывает component={Profile}. 
           В данном случае {Profile} просто название компоненты,
         поэтому мы не можеи туда прокинуть props, выходим из положения путём использования атрибута "render", 
         куда запихуем анонимную функцию, 
         который отрисовывает компоненту, а в неё уже можно закинуть props*/}
-          <Route
-            path="/Dialogs"
-            render={() => <Dialogs state={props.state.dialogsPage} />}
-          />
-          <Route
-            path="/Profile"
-            render={() => <Profile state={props.state.profilePage} />}
-          />
-          <Route path="/News" component={News} />
-          <Route path="/Settings" component={Settings} />
-          <Route path="/Musik" component={Music} />
-        </div>
+        <Route
+          path="/Dialogs"
+          render={() => <Dialogs state={props.state.dialogsPage} />}
+        />
+        <Route
+          path="/Profile"
+          render={() => (
+            <Profile state={props.state.profilePage} addPost={props.addPost} />
+          )}
+        />
+        <Route path="/News" component={News} />
+        <Route path="/Settings" component={Settings} />
+        <Route path="/Musik" component={Music} />
       </div>
-    </BrowserRouter>
+    </div>
+    // </BrowserRouter>
   );
 };
 

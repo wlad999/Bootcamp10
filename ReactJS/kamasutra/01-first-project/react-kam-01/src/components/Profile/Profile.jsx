@@ -11,12 +11,12 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 // ];
 
 const Profile = props => {
-  console.log('props Profile', props);
+  // console.log('props Profile', props);
 
   return (
     <div>
       <ProfileInfo img="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" />
-      <MyPosts posts={props.state.posts} />
+      <MyPosts posts={props.state.posts} addPost={props.addPost} />
     </div>
   );
 };
