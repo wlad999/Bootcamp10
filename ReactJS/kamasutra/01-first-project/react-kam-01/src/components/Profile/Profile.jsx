@@ -16,7 +16,12 @@ const Profile = props => {
   return (
     <div>
       <ProfileInfo img="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" />
-      <MyPosts posts={props.state.posts} addPost={props.addPost} />
+      <MyPosts
+        posts={props.profilePage.posts}
+        newPostText={props.profilePage.newPostText}
+        addPost={props.addPost}
+        upDateNewPostText={props.upDateNewPostText}
+      />
     </div>
   );
 };

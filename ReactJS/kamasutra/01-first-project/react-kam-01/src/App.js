@@ -35,7 +35,7 @@ import { Route } from 'react-router-dom';
 //   { id: 4, likesCount: 15, message: 'Cool!' },
 // ];
 const App = props => {
-  console.log('addPost -App', props.addPost);
+  // console.log('addPost -App', props.addPost);
 
   return (
     // <BrowserRouter>
@@ -58,7 +58,11 @@ const App = props => {
         <Route
           path="/Profile"
           render={() => (
-            <Profile state={props.state.profilePage} addPost={props.addPost} />
+            <Profile
+              profilePage={props.state.profilePage}
+              addPost={props.addPost}
+              upDateNewPostText={props.upDateNewPostText}
+            />
           )}
         />
         <Route path="/News" component={News} />
