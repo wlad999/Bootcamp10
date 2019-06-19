@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from '../../render';
+let rerenderEntireTree = () => {
+  console.log('State changed');
+};
 
 let state = {
   profilePage: {
@@ -53,7 +55,7 @@ let state = {
   },
 };
 // window.state = state;
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: 5,
     message: state.profilePage.newPostText,
@@ -61,13 +63,13 @@ export let addPost = () => {
   };
   state.profilePage.posts.push(newPost);
   state.profilePage.newPostText = '';
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 };
-export let upDateNewPostText = newText => {
+export const upDateNewPostText = newText => {
   state.profilePage.newPostText = newText;
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 };
-export let addMessage = () => {
+export const addMessage = () => {
   let newMessage = {
     id: 7,
     message: state.dialogsPage.newMessage,
@@ -78,12 +80,15 @@ export let addMessage = () => {
   state.dialogsPage.dialogs.push(newCustomer);
 
   state.dialogsPage.newMessage = '';
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 };
 
-export let upDateNewMessage = newMess => {
+export const upDateNewMessage = newMess => {
   state.dialogsPage.newMessage = newMess;
-  rerenderEntireTree(state);
+  rerenderEntireTree();
+};
+export const subscribe = observer => {
+  rerenderEntireTree = observer; /*'Это pattern, наблюдатель-observer,  publisher-subscriber, addEventListener*/
 };
 
 export default state;
