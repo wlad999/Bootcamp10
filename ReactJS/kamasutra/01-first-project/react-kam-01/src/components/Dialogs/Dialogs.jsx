@@ -4,6 +4,7 @@ import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
 
 const Dialogs = props => {
+  console.log('Dalogs-props', props);
   // let dialogs = [
   //   { id: 1, name: 'Vlad' },
   //   { id: 2, name: 'Stas' },
@@ -30,8 +31,13 @@ const Dialogs = props => {
     <Massage message={m.message} />
   ));
   let addMessage = () => {
-    let mes = newMessageElement.current.value;
-    alert(mes);
+    props.addMessage();
+  };
+
+  let onMassegeChange = () => {
+    let newMes = newMessageElement.current.value;
+    props.upDateNewMessage(newMes);
+    // console.log(newMes);
   };
   let newMessageElement = React.createRef();
 
@@ -40,7 +46,13 @@ const Dialogs = props => {
       <div className={s.dialogsItems}>{dialogsElements}</div>
       <div>
         <div className={s.messages}>{messegesElements}</div>
-        <textarea ref={newMessageElement} name="" id="" cols="20" rows="5" />
+        <textarea
+          ref={newMessageElement}
+          onChange={onMassegeChange}
+          value={props.state.newMessage}
+          cols="20"
+          rows="5"
+        />
         <div>
           <button onClick={addMessage}>add message</button>
         </div>

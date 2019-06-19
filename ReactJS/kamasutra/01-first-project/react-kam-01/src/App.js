@@ -53,7 +53,13 @@ const App = props => {
         который отрисовывает компоненту, а в неё уже можно закинуть props*/}
         <Route
           path="/Dialogs"
-          render={() => <Dialogs state={props.state.dialogsPage} />}
+          render={() => (
+            <Dialogs
+              state={props.state.dialogsPage}
+              upDateNewMessage={props.upDateNewMessage}
+              addMessage={props.addMessage}
+            />
+          )}
         />
         <Route
           path="/Profile"

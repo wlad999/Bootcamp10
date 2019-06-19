@@ -27,6 +27,7 @@ let state = {
       { id: 5, message: 'Yuhu' },
       { id: 6, message: 'Cool' },
     ],
+    newMessage: 'TEST!!!!!',
   },
   sideBar: {
     friends: [
@@ -64,6 +65,24 @@ export let addPost = () => {
 };
 export let upDateNewPostText = newText => {
   state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+export let addMessage = () => {
+  let newMessage = {
+    id: 7,
+    message: state.dialogsPage.newMessage,
+  };
+  let newCustomer = { id: 7, name: 'Bond' };
+
+  state.dialogsPage.messages.push(newMessage);
+  state.dialogsPage.dialogs.push(newCustomer);
+
+  state.dialogsPage.newMessage = '';
+  rerenderEntireTree(state);
+};
+
+export let upDateNewMessage = newMess => {
+  state.dialogsPage.newMessage = newMess;
   rerenderEntireTree(state);
 };
 
