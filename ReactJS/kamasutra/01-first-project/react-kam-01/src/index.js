@@ -1,14 +1,9 @@
 import * as serviceWorker from './serviceWorker';
-import state from './components/redux/state';
+import store from './components/redux/state';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { addPost } from './components/redux/state';
-import { upDateNewPostText } from './components/redux/state';
-import { upDateNewMessage } from './components/redux/state';
-import { addMessage } from './components/redux/state';
-import { subscribe } from './components/redux/state';
 import { BrowserRouter } from 'react-router-dom';
 // Ctrl и пробел - подсказки по импорту
 
@@ -17,17 +12,17 @@ let rerenderEntireTree = state => {
     <BrowserRouter>
       <App
         state={state}
-        addPost={addPost}
-        upDateNewPostText={upDateNewPostText}
-        upDateNewMessage={upDateNewMessage}
-        addMessage={addMessage}
+        addPost={store.addPost.bind(store)}
+        upDateNewPostText={store.upDateNewPostText.bind(store)}
+        addMessage={store.addMessage.bind(store)}
+        upDateNewMessage={store.upDateNewMessage.bind(store)}
       />
     </BrowserRouter>,
     document.getElementById('root'),
   );
 };
-rerenderEntireTree(state);
-subscribe(rerenderEntireTree);
+rerenderEntireTree(store.getState());
+store.subscribe(rerenderEntireTree);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

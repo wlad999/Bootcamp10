@@ -10,33 +10,8 @@ import Music from './components/Music/Music';
 import { Route } from 'react-router-dom';
 // /*подключаем router.всталяем тег <BrowserRouter>*/- перенесли его в index.js
 
-// let dialogs = [
-//   { id: 1, name: 'Vlad' },
-//   { id: 2, name: 'Stas' },
-//   { id: 3, name: 'Alex' },
-//   { id: 4, name: 'Valera' },
-//   { id: 5, name: 'Pasha' },
-//   { id: 6, name: 'Rodik' },
-// ];
-
-// let messages = [
-//   { id: 1, message: 'Hello' },
-//   { id: 2, message: 'Mambo' },
-//   { id: 3, message: 'Shuari' },
-//   { id: 4, message: 'Jumbo' },
-//   { id: 5, message: 'Yuhu' },
-//   { id: 6, message: 'Cool' },
-// ];
-
-// let posts = [
-//   { id: 1, likesCount: 5, message: 'How are you?' },
-//   { id: 2, likesCount: 7, message: "it's my first post" },
-//   { id: 3, likesCount: 3, message: 'Realy?' },
-//   { id: 4, likesCount: 15, message: 'Cool!' },
-// ];
 const App = props => {
-  // console.log('addPost -App', props.addPost);
-
+  // console.log('addPost -App', props.state);
   return (
     // <BrowserRouter>
     /*подключаем тег <BrowserRouter>*/

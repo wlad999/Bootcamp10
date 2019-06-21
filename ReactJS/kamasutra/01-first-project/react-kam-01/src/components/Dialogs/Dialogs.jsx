@@ -4,7 +4,7 @@ import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
 
 const Dialogs = props => {
-  console.log('Dalogs-props', props);
+  // console.log('Dalogs-props', props);
   // let dialogs = [
   //   { id: 1, name: 'Vlad' },
   //   { id: 2, name: 'Stas' },
