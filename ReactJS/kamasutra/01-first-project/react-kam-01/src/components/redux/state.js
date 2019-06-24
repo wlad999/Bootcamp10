@@ -51,45 +51,75 @@ let store = {
       ],
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log('State changed');
   },
-  addPost() {
-    let newPost = {
-      id: 5,
-      message: this._state.profilePage.newPostText,
-      likesCount: 0,
-    };
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = '';
-    this._callSubscriber(this._state);
-  },
-  upDateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
-  addMessage() {
-    let newMessage = {
-      id: 7,
-      message: this._state.dialogsPage.newMessage,
-    };
-    let newCustomer = { id: 7, name: 'Bond' };
-
-    this._state.dialogsPage.messages.push(newMessage);
-    this._state.dialogsPage.dialogs.push(newCustomer);
-
-    this._state.dialogsPage.newMessage = '';
-    this._callSubscriber(this._state);
-  },
-  upDateNewMessage(newMess) {
-    this._state.dialogsPage.newMessage = newMess;
-    this._callSubscriber(this._state);
+  getState() {
+    return this._state;
   },
   subscribe(observer) {
     this._callSubscriber = observer; /*'Это pattern, наблюдатель-observer,  publisher-subscriber, addEventListener*/
+  },
+  // addPost() {
+  //   let newPost = {
+  //     id: 5,
+  //     message: this._state.profilePage.newPostText,
+  //     likesCount: 0,
+  //   };
+  //   this._state.profilePage.posts.push(newPost);
+  //   this._state.profilePage.newPostText = '';
+  //   this._callSubscriber(this._state);
+  // },
+  // upDateNewPostText(newText) {
+  //   this._state.profilePage.newPostText = newText;
+  //   this._callSubscriber(this._state);
+  // },
+  // addMessage() {
+  //   let newMessage = {
+  //     id: 7,
+  //     message: this._state.dialogsPage.newMessage,
+  //   };
+  //   let newCustomer = { id: 7, name: 'Bond' };
+
+  //   this._state.dialogsPage.messages.push(newMessage);
+  //   this._state.dialogsPage.dialogs.push(newCustomer);
+
+  //   this._state.dialogsPage.newMessage = '';
+  //   this._callSubscriber(this._state);
+  // },
+  // upDateNewMessage(newMess) {
+  //   this._state.dialogsPage.newMessage = newMess;
+  //   this._callSubscriber(this._state);
+  // },
+  dispatch(action) {
+    if (action.type === 'ADD-POST') {
+      let newPost = {
+        id: 5,
+        message: this._state.profilePage.newPostText,
+        likesCount: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === 'UPDATE-MEW-POST-TEXT') {
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    } else if (action.type === 'ADD-MESSAGE') {
+      let newMessage = {
+        id: 7,
+        message: this._state.dialogsPage.newMessage,
+      };
+      let newCustomer = { id: 7, name: 'Bond' };
+
+      this._state.dialogsPage.messages.push(newMessage);
+      this._state.dialogsPage.dialogs.push(newCustomer);
+
+      this._state.dialogsPage.newMessage = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === 'UPDATE-NEW-MESSAGE') {
+      this._state.dialogsPage.newMessage = action.newMess;
+      this._callSubscriber(this._state);
+    }
   },
 };
 
