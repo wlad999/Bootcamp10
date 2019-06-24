@@ -31,12 +31,15 @@ const Dialogs = props => {
     <Massage message={m.message} />
   ));
   let addMessage = () => {
-    props.addMessage();
+    // props.addMessage();
+    props.dispatch({ type: 'ADD-MESSAGE' });
   };
+  // };
 
   let onMassegeChange = () => {
     let newMes = newMessageElement.current.value;
-    props.upDateNewMessage(newMes);
+    // props.upDateNewMessage(newMes);
+    props.dispatch({ type: 'UPDATE-NEW-MESSAGE', newMess: newMes });
     // console.log(newMes);
   };
   let newMessageElement = React.createRef();

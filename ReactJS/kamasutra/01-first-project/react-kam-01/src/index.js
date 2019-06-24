@@ -12,10 +12,10 @@ let rerenderEntireTree = state => {
     <BrowserRouter>
       <App
         state={state}
-        addPost={store.addPost.bind(store)}
-        upDateNewPostText={store.upDateNewPostText.bind(store)}
-        addMessage={store.addMessage.bind(store)}
-        upDateNewMessage={store.upDateNewMessage.bind(store)}
+        dispatch={store.dispatch.bind(store)}
+        // upDateNewPostText={store.upDateNewPostText.bind(store)}
+        // addMessage={store.addMessage.bind(store)}
+        // upDateNewMessage={store.upDateNewMessage.bind(store)}
       />
     </BrowserRouter>,
     document.getElementById('root'),
