@@ -2,6 +2,10 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
+import {
+  addMessageActionCreator,
+  updateNewMessageActionCreator,
+} from '../redux/state';
 
 const Dialogs = props => {
   let dialogsElements = props.state.dialogs.map(dialog => (
@@ -13,14 +17,16 @@ const Dialogs = props => {
   ));
   let addMessage = () => {
     // props.addMessage();
-    props.dispatch({ type: 'ADD-MESSAGE' });
+    // props.dispatch({ type: 'ADD-MESSAGE' });
+    props.dispatch(addMessageActionCreator());
   };
   // };
 
   let onMassegeChange = () => {
     let newMes = newMessageElement.current.value;
     // props.upDateNewMessage(newMes);
-    props.dispatch({ type: 'UPDATE-NEW-MESSAGE', newMess: newMes });
+    // props.dispatch({ type: 'UPDATE-NEW-MESSAGE', newMess: newMes });
+    props.dispatch(updateNewMessageActionCreator(newMes));
     // console.log(newMes);
   };
   let newMessageElement = React.createRef();
