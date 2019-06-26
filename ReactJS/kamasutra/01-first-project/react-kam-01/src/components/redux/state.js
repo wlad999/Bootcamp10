@@ -2,12 +2,6 @@ import profileReducer from './profile-Reducer';
 import dialogsReducer from './dialogs-Reducer';
 import sideBarReducer from './sideBar-Reducer';
 
-// const ADD_POST = 'ADD-POST';
-// const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-// const ADD_MESSAGE = 'ADD-MESSAGE';
-// const UPDATE_NEW_MESSAGE = 'UPDATE-NEW-MESSAGE';
-
 let store = {
   _state: {
     profilePage: {

@@ -20,20 +20,6 @@ const dialogsReducer = (state, action) => {
     default:
       return state;
   }
-  // if (action.type === ADD_MESSAGE) {
-  //   let newMessage = {
-  //     id: 7,
-  //     message: state.newMessage,
-  //   };
-  //   let newCustomer = { id: 7, name: 'Bond' };
-
-  //   state.messages.push(newMessage);
-  //   state.dialogs.push(newCustomer);
-  //   state.newMessage = '';
-  // } else if (action.type === UPDATE_NEW_MESSAGE) {
-  //   state.newMessage = action.newMess;
-  // }
-  // return state;
 };
 
 export const addMessageActionCreator = () => ({
