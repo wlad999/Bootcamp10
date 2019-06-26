@@ -22,14 +22,16 @@ const Dialogs = props => {
   };
   // };
 
-  let onMassegeChange = () => {
-    let newMes = newMessageElement.current.value;
-    // props.upDateNewMessage(newMes);
-    // props.dispatch({ type: 'UPDATE-NEW-MESSAGE', newMess: newMes });
+  let onMassegeChange = e => {
+    let newMes = e.target.value;
+    // let newMes = newMessageElement.current.value;
+    // вместо ссылки ref={newMessageElement} используем в функции event.target.value
+
     props.dispatch(updateNewMessageActionCreator(newMes));
     // console.log(newMes);
   };
-  let newMessageElement = React.createRef();
+  // let newMessageElement = React.createRef();
+  // вместо ссылки ref={newMessageElement} используем в функции event.target.value
 
   return (
     <div className={s.dialogs}>
@@ -37,7 +39,7 @@ const Dialogs = props => {
       <div>
         <div className={s.messages}>{messegesElements}</div>
         <textarea
-          ref={newMessageElement}
+          // ref={newMessageElement}
           onChange={onMassegeChange}
           value={props.state.newMessage}
           cols="20"
