@@ -5,7 +5,7 @@ import DialogItem from './DialogItem/DialogItem';
 import {
   addMessageActionCreator,
   updateNewMessageActionCreator,
-} from '../redux/state';
+} from '../redux/dialogs-Reducer';
 
 const Dialogs = props => {
   let dialogsElements = props.state.dialogs.map(dialog => (
