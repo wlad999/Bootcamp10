@@ -2,33 +2,32 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
-import {
-  addMessageActionCreator,
-  updateNewMessageActionCreator,
-} from '../redux/dialogs-Reducer';
+// import {
+//   addMessageActionCreator,
+//   updateNewMessageActionCreator,
+// } from '../redux/dialogs-Reducer';
 
 const Dialogs = props => {
-  let dialogsElements = props.state.dialogs.map(dialog => (
+  let state = props.dialogsPage;
+  let dialogsElements = state.dialogs.map(dialog => (
     <DialogItem name={dialog.name} id={dialog.id} />
   ));
 
-  let messegesElements = props.state.messages.map(m => (
+  let messegesElements = state.messages.map(m => (
     <Massage message={m.message} />
   ));
-  let addMessage = () => {
+  let onSendMessageClick = () => {
     // props.addMessage();
     // props.dispatch({ type: 'ADD-MESSAGE' });
-    props.dispatch(addMessageActionCreator());
+    props.sendMessage();
   };
   // };
 
   let onMassegeChange = e => {
-    let newMes = e.target.value;
+    let body = e.target.value;
+    props.updateNewMessageBody(body);
     // let newMes = newMessageElement.current.value;
     // вместо ссылки ref={newMessageElement} используем в функции event.target.value
-
-    props.dispatch(updateNewMessageActionCreator(newMes));
-    // console.log(newMes);
   };
   // let newMessageElement = React.createRef();
   // вместо ссылки ref={newMessageElement} используем в функции event.target.value
@@ -39,14 +38,14 @@ const Dialogs = props => {
       <div>
         <div className={s.messages}>{messegesElements}</div>
         <textarea
-          // ref={newMessageElement}
+          placeholder="Enter your massege"
           onChange={onMassegeChange}
-          value={props.state.newMessage}
+          value={props.newMessage}
           cols="20"
           rows="5"
         />
         <div>
-          <button onClick={addMessage}>add message</button>
+          <button onClick={onSendMessageClick}>add message</button>
         </div>
       </div>
     </div>

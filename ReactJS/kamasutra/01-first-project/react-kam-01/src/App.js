@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import Music from './components/Music/Music';
@@ -12,6 +12,7 @@ import { Route } from 'react-router-dom';
 
 const App = props => {
   // console.log('addPost -App', props.state);
+
   return (
     // <BrowserRouter>
     /*подключаем тег <BrowserRouter>*/
@@ -28,24 +29,9 @@ const App = props => {
         который отрисовывает компоненту, а в неё уже можно закинуть props*/}
         <Route
           path="/Dialogs"
-          render={() => (
-            <Dialogs
-              state={props.state.dialogsPage}
-              dispatch={props.dispatch}
-              // addMessage={props.addMessage}
-            />
-          )}
+          render={() => <DialogsContainer store={props.store} />}
         />
-        <Route
-          path="/Profile"
-          render={() => (
-            <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch}
-              // upDateNewPostText={props.upDateNewPostText}
-            />
-          )}
-        />
+        <Route path="/Profile" render={() => <Profile store={props.store} />} />
         <Route path="/News" component={News} />
         <Route path="/Settings" component={Settings} />
         <Route path="/Musik" component={Music} />
