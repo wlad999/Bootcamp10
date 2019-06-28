@@ -1,26 +1,22 @@
 import React from 'react';
 import s from './OneFriend.module.css';
-// import s from './Profile.module.css';
-// import MyPosts from './MyPosts/MyPosts';
-// import ProfileInfo from './ProfileInfo/ProfileInfo';
+import StoreContext from '../../StoreContext.js';
 
-const OneFriend = props => {
-  let oneAvaFriend = props.state.map(p => (
-    <div className={s.fr}>
-      <img src={p.ava} alt="" />
-      {p.name}
-    </div>
-  ));
-  return <div className={s.item}> {oneAvaFriend}</div>;
+const OneFriend = () => {
+  return (
+    <StoreContext.Consumer>
+      {store => {
+        let state = store.getState().sideBar.friends;
+        let oneAvaFriend = state.map(p => (
+          <div className={s.fr}>
+            <img src={p.ava} alt="" />
+            {p.name}
+          </div>
+        ));
+        return <div className={s.item}> {oneAvaFriend}</div>;
+      }}
+    </StoreContext.Consumer>
+  );
 };
-
-// const OneFriend = props => {
-//   return props.state.map(p => (
-//     <div className={s.fr}>
-//       <img src={p.ava} alt="" />
-//       {p.name}
-//     </div>
-//   ));
-// };
 
 export default OneFriend;

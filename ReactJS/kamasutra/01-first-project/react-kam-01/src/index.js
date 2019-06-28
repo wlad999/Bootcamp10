@@ -5,20 +5,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import StoreContext from './StoreContext';
+import { Provider } from './StoreContext';
 // Ctrl и пробел - подсказки по импорту
 
-let rerenderEntireTree = state => {
-  debugger;
+let rerenderEntireTree = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <App
-        state={state}
-        store={store}
-        dispatch={store.dispatch.bind(store)}
-        // upDateNewPostText={store.upDateNewPostText.bind(store)}
-        // addMessage={store.addMessage.bind(store)}
-        // upDateNewMessage={store.upDateNewMessage.bind(store)}
-      />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>,
     document.getElementById('root'),
   );
@@ -26,10 +22,6 @@ let rerenderEntireTree = state => {
 rerenderEntireTree(store.getState());
 
 store.subscribe(rerenderEntireTree);
-// store.subscribe(() => {
-//   let state = store.getState();
-//   rerenderEntireTree(state);
-// });
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

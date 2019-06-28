@@ -73,21 +73,6 @@ let store = {
   },
 };
 
-// export const addPostActionCreator = () => ({
-//   type: ADD_POST,
-// });
-// export const updateNewPostTextActionCreator = text => ({
-//   type: UPDATE_NEW_POST_TEXT,
-//   newText: text,
-// });
-// export const addMessageActionCreator = () => ({
-//   type: ADD_MESSAGE,
-// });
-// export const updateNewMessageActionCreator = newMes => ({
-//   type: UPDATE_NEW_MESSAGE,
-//   newMess: newMes,
-// });
-
 export default store;
 
 window.store = store;
