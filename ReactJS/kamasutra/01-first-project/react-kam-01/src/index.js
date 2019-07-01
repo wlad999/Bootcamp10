@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import StoreContext from './StoreContext';
+// import StoreContext from './StoreContext';
 import { Provider } from './StoreContext';
 // Ctrl и пробел - подсказки по импорту
 
-let rerenderEntireTree = store => {
+let rerenderEntireTree = () => {
   debugger;
   ReactDOM.render(
     <BrowserRouter>
