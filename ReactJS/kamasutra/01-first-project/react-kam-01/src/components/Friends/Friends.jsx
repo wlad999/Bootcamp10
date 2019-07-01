@@ -6,7 +6,7 @@ const Friends = props => {
   return (
     <div className={s.main}>
       FRIENDS
-      <OneFriend />
+      {/* <OneFriend /> */}
     </div>
   );
 };

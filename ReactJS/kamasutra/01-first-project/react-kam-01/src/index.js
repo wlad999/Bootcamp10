@@ -1,5 +1,5 @@
 import * as serviceWorker from './serviceWorker';
-import store from './components/redux/state';
+import store from './components/redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -9,7 +9,8 @@ import StoreContext from './StoreContext';
 import { Provider } from './StoreContext';
 // Ctrl и пробел - подсказки по импорту
 
-let rerenderEntireTree = () => {
+let rerenderEntireTree = store => {
+  debugger;
   ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>

@@ -3,6 +3,7 @@ import s from './OneFriend.module.css';
 import StoreContext from '../../StoreContext.js';
 
 const OneFriend = () => {
+  debugger;
   return (
     <StoreContext.Consumer>
       {store => {
