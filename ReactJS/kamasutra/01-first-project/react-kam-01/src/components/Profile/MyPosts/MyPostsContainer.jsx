@@ -11,7 +11,7 @@ const MyPostsConytainer = () => {
   return (
     <StoreContext.Consumer>
       {store => {
-        let state = store.getState();
+        // let state = store.getState();
         let addPost = () => {
           store.dispatch(addPostActionCreator());
         };

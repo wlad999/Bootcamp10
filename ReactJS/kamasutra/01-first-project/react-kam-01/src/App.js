@@ -20,7 +20,7 @@ const App = props => {
         <Route path="/Profile" render={() => <Profile />} />
         <Route path="/News" component={News} />
         <Route path="/Settings" component={Settings} />
-        <Route path="/Musik" component={Music} />
+        <Route path="/Musiс" component={Music} />
       </div>
     </div>
   );

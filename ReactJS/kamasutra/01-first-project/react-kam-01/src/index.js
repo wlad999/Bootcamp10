@@ -10,7 +10,6 @@ import { Provider } from './StoreContext';
 // Ctrl и пробел - подсказки по импорту
 
 let rerenderEntireTree = () => {
-  debugger;
   ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>
