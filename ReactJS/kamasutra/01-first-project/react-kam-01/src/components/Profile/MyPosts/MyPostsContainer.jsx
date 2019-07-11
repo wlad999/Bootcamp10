@@ -1,5 +1,5 @@
-import React from 'react';
-import {connect} from 'react-redux';
+// import React from 'react';
+import { connect } from 'react-redux';
 
 import {
   updateNewPostTextActionCreator,
@@ -33,12 +33,14 @@ import MyPosts from './MyPosts';
 // };
 
 let mapStateToProps = state => {
+  debugger;
   return {
     posts: state.profilePage.posts,
     newPostText: state.profilePage.newPostTexte,
   };
 };
 let mapDispatchToProps = dispatch => {
+  debugger;
   return {
     upDateNewPostText: text => {
       let action = updateNewPostTextActionCreator(text);

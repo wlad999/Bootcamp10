@@ -10,19 +10,18 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 // Ctrl и пробел - подсказки по импорту
 
-let rerenderEntireTree = () => {
-  ReactDOM.render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>,
-    document.getElementById('root'),
-  );
-};
-rerenderEntireTree(store.getState());
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById('root'),
+);
 
-store.subscribe(rerenderEntireTree);
+// rerenderEntireTree(store.getState());
+
+// store.subscribe(rerenderEntireTree);
 
 // store.subscribe(() => {
 //   let state = store.getState();

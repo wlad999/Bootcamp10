@@ -8,6 +8,7 @@ import Post from './Post/Post';
 // } from '../../redux/profile-Reducer';
 
 const MyPosts = props => {
+  debugger;
   // console.log(props);
 
   let postsElements = props.posts.map(p => (
