@@ -36,11 +36,11 @@ let mapStateToProps = state => {
   debugger;
   return {
     posts: state.profilePage.posts,
-    newPostText: state.profilePage.newPostTexte,
+    newPostText: state.profilePage.newPostText,
   };
 };
 let mapDispatchToProps = dispatch => {
-  debugger;
+  // debugger;
   return {
     upDateNewPostText: text => {
       let action = updateNewPostTextActionCreator(text);

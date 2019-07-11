@@ -4,13 +4,14 @@ import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
 
 const Dialogs = props => {
+  debugger;
   let state = props.dialogsPage;
   let dialogsElements = state.dialogs.map(dialog => (
-    <DialogItem name={dialog.name} id={dialog.id} />
+    <DialogItem name={dialog.name} id={dialog.id} key={dialog.id} />
   ));
 
   let messegesElements = state.messages.map(m => (
-    <Massage message={m.message} />
+    <Massage message={m.message} key={m.id} />
   ));
   let onSendMessageClick = () => {
     // props.addMessage();
@@ -36,7 +37,7 @@ const Dialogs = props => {
         <textarea
           placeholder="Enter your massege"
           onChange={onMassegeChange}
-          value={props.newMessage}
+          value={state.newMessage}
           cols="20"
           rows="5"
         />

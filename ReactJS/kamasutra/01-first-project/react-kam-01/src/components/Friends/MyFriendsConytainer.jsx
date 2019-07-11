@@ -4,7 +4,6 @@ import OneFriend from './OneFriend';
 // import s from './Friends.module.css';
 
 let mapStateToProps = state => {
-  debugger;
   return {
     friends: state.sideBar.friends,
   };

@@ -3,9 +3,8 @@ import s from './OneFriend.module.css';
 import ss from './Friends.module.css';
 
 const OneFriend = props => {
-  debugger;
   let oneAvaFriend = props.friends.map(p => (
-    <div className={s.fr}>
+    <div className={s.fr} key={p.id}>
       <img src={p.ava} alt="" />
       {p.name}
     </div>
