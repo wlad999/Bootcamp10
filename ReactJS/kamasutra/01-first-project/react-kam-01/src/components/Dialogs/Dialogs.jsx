@@ -14,11 +14,8 @@ const Dialogs = props => {
     <Massage message={m.message} key={m.id} />
   ));
   let onSendMessageClick = () => {
-    // props.addMessage();
-    // props.dispatch({ type: 'ADD-MESSAGE' });
     props.sendMessage();
   };
-  // };
 
   let onMassegeChange = e => {
     let body = e.target.value;
