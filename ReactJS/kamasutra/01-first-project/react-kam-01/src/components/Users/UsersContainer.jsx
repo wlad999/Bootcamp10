@@ -77,9 +77,7 @@ let mapDispatchToProps = dispatch => {
   };
 };
 
-const UsersContainer = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(UsersApiComponent);
-
-export default UsersContainer;

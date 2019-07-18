@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 // import styles from './users.module.css';
-import * as Axios from 'axios';
+// import * as Axios from 'axios';
 // import userPhoto from '../../assets/images/users.png';
-import Users from './Users';
+// import Users from './Users';
 
 // class UsersApiComponent extends React.Component {
 //   componentDidMount() {
