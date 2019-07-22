@@ -40,4 +40,5 @@
 //     );
 //   }
 // }
+// Перекинули эту компоненту в UsersContainer.jsx
 // export default UsersApiComponent;
