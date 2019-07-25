@@ -41,10 +41,12 @@ const ProfileInfo = props => {
           <a href={props.profile.contacts.twitter}>
             <img src={twitter} alt="" width="50px" />
           </a>
-          <a href={'https://' + props.profile.contacts.facebook}>
+          {/* <a href={'https://' + props.profile.contacts.facebook}> */}
+          <a href={props.profile.contacts.facebook}>
             <img src={fb} alt="" width="50px" />
           </a>
-          <a href={'https://' + props.profile.contacts.github}>
+          {/* <a href={'https://' + props.profile.contacts.github}> */}
+          <a href={props.profile.contacts.github}>
             <img src={git} alt="" width="50px" />
           </a>
         </div>
