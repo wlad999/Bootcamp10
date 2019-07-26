@@ -28,6 +28,7 @@ const ProfileInfo = props => {
           // }
           alt=""
         />
+        <div>aboutMe: {props.profile.fullName}</div>
         <div>aboutMe: {props.profile.aboutMe}</div>
         <div>
           {/* lookingForAJob: */}
