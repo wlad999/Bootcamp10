@@ -11,12 +11,14 @@ import {
 import Users from './Users';
 import * as Axios from 'axios';
 import Preloader from '../common/preloader/Preloader';
-import { getUsers } from '../../api/api.js';
+// import { getUsers } from '../../api/api.js';
+import { usersAPI } from '../../api/api';
 
 class UsersApiComponent extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
-    getUsers(this.props.currentPage, this.props.pageSize)
+    usersAPI
+      .getUsers(this.props.currentPage, this.props.pageSize)
       // Axios.get(
       //   `https://social-network.samuraijs.com/api/1.0/users?page=${
       //     this.props.currentPage
@@ -42,7 +44,7 @@ class UsersApiComponent extends React.Component {
     //     withCredentials: true,
     //   },
     // )
-    getUsers(pageNumber, this.props.pageSize).then(data => {
+    usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
       this.props.toggleIsFetching(false);
       this.props.setUsers(data.items);
     });
