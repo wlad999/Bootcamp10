@@ -45,7 +45,10 @@ let Users = props => {
             <div>
               {u.followed ? (
                 <button
+                  disabled={props.followingInProgress}
                   onClick={() => {
+                    debugger;
+                    props.toggleFollowingProgress(true);
                     usersAPI
                       .unfollowUser(u)
                       // Axios.delete(
@@ -63,13 +66,17 @@ let Users = props => {
                           props.unfollow(u.id);
                         }
                       });
+                    props.toggleFollowingProgress(false);
                   }}
                 >
                   Unfollow
                 </button>
               ) : (
                 <button
+                  disabled={props.followingInProgress}
                   onClick={() => {
+                    debugger;
+                    props.toggleFollowingProgress(true);
                     usersAPI.followUser(u).then(data => {
                       if (data.resultCode === 0) {
                         props.follow(u.id);
@@ -91,6 +98,7 @@ let Users = props => {
                     //     props.follow(u.id);
                     //   }
                     // });
+                    props.toggleFollowingProgress(false);
                   }}
                 >
                   Follow
