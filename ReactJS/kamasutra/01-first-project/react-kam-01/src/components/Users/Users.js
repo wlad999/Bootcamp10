@@ -45,11 +45,11 @@ let Users = props => {
             <div>
               {u.followed ? (
                 <button
-                  disabled={props.followingInProgress}
-                  onClick={() => {
-                    debugger;
-                    props.toggleFollowingProgress(true);
-                    usersAPI
+                  disabled={props.followingInProgress.some(id => id === u.id)}
+                  onClick={async () => {
+                    // debugger;
+                    await props.toggleFollowingProgress(true, u.id);
+                    await usersAPI
                       .unfollowUser(u)
                       // Axios.delete(
                       //   `https://social-network.samuraijs.com/api/1.0/follow/${
@@ -66,21 +66,25 @@ let Users = props => {
                           props.unfollow(u.id);
                         }
                       });
-                    props.toggleFollowingProgress(false);
+                    await props.toggleFollowingProgress(false, u.id);
                   }}
                 >
                   Unfollow
                 </button>
               ) : (
                 <button
-                  disabled={props.followingInProgress}
+                  disabled={props.followingInProgress.some(id => id === u.id)}
                   onClick={() => {
-                    debugger;
-                    props.toggleFollowingProgress(true);
+                    // debugger;
+                    props.toggleFollowingProgress(true, u.id);
                     usersAPI.followUser(u).then(data => {
                       if (data.resultCode === 0) {
                         props.follow(u.id);
                       }
+                      props.toggleFollowingProgress(
+                        false,
+                        u.id,
+                      ); /*В данном случае -  toggleFollowingProgress стоит в обработкеответа, если его вінести за предлы then, то toggleFollowingProgress сработает раньше и передаст false  и мы не увидим disabled*/
                     });
                     // Axios.post(
                     //   `https://social-network.samuraijs.com/api/1.0/follow/${
@@ -98,7 +102,6 @@ let Users = props => {
                     //     props.follow(u.id);
                     //   }
                     // });
-                    props.toggleFollowingProgress(false);
                   }}
                 >
                   Follow

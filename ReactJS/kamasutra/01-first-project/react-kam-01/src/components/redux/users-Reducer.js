@@ -12,7 +12,7 @@ let initialState = {
   totalUsersCount: 0,
   currentPage: 1,
   isFetching: false,
-  followingInProgress: false,
+  followingInProgress: [],
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -52,12 +52,18 @@ const usersReducer = (state = initialState, action) => {
       return { ...state, isFetching: action.isFetching };
     }
     case TOGGLE_IS_FOLLOWING_PROGRESS: {
-      return { ...state, followingInProgress: action.followingInProgress };
+      return {
+        ...state,
+        followingInProgress: action.isFetching
+          ? [...state.followingInProgress, action.userId]
+          : state.followingInProgress.filter(id => id !== action.userId),
+      };
     }
     default:
       return state;
   }
 };
+
 // ActionCreator - AC
 export const follow = userId => ({
   type: FOLLOW,
@@ -86,9 +92,10 @@ export const toggleIsFetching = isFetching => ({
   isFetching: isFetching,
   // если ключь и значения равны можно записать один раз - currentPage
 });
-export const toggleFollowingProgress = isFetching => ({
+export const toggleFollowingProgress = (isFetching, userId) => ({
   type: TOGGLE_IS_FOLLOWING_PROGRESS,
-  followingInProgress: isFetching,
+  isFetching: isFetching,
+  userId: userId,
 });
 
 export default usersReducer;
