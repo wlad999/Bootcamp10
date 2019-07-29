@@ -9,7 +9,7 @@ import {
   toggleIsFetching,
 } from '../redux/users-Reducer.js';
 import Users from './Users';
-import * as Axios from 'axios';
+// import * as Axios from 'axios';
 import Preloader from '../common/preloader/Preloader';
 // import { getUsers } from '../../api/api.js';
 import { usersAPI } from '../../api/api';

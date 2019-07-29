@@ -33,7 +33,7 @@ const ProfileInfo = props => {
         <div>
           {/* lookingForAJob: */}
           {props.profile.lookingForAJob ? (
-            <img src={lookingForAJob} alt="" width="100px" />
+            <img src={lookingForAJob} alt="" className={s.job} />
           ) : (
             <img src={noNeedAJob} alt="" />
           )}
