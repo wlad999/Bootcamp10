@@ -84,7 +84,7 @@ let Users = props => {
                       props.toggleFollowingProgress(
                         false,
                         u.id,
-                      ); /*В данном случае -  toggleFollowingProgress стоит в обработкеответа, если его вінести за предлы then, то toggleFollowingProgress сработает раньше и передаст false  и мы не увидим disabled*/
+                      ); /*В данном случае -  toggleFollowingProgress стоит в обработке ответа, если его вынести за предлы then, то toggleFollowingProgress сработает раньше и передаст false  и мы не увидим disabled*/
                     });
                     // Axios.post(
                     //   `https://social-network.samuraijs.com/api/1.0/follow/${

@@ -8,6 +8,7 @@ import {
   setTotalUsersCount,
   toggleIsFetching,
   toggleFollowingProgress,
+  getUsersThunkCreator,
 } from '../redux/users-Reducer.js';
 import Users from './Users';
 // import * as Axios from 'axios';
@@ -17,9 +18,21 @@ import { usersAPI } from '../../api/api';
 
 class UsersApiComponent extends React.Component {
   componentDidMount() {
+    this.props.getUsersThunkCreator(
+      this.props.currentPage,
+      this.props.pageSize,
+    );
+
+    /*Вместо (usersAPI) этого вызываем getUsersThunkCreator()
     this.props.toggleIsFetching(true);
     usersAPI
       .getUsers(this.props.currentPage, this.props.pageSize)
+      .then(data => {
+        this.props.toggleIsFetching(false);
+        this.props.setUsers(data.items);
+        this.props.setTotalUsersCount(data.totalCount);
+      });*/
+    /* вместо этого поставили usersAPI.getUsers
       // Axios.get(
       //   `https://social-network.samuraijs.com/api/1.0/users?page=${
       //     this.props.currentPage
@@ -27,16 +40,19 @@ class UsersApiComponent extends React.Component {
       //   {
       //     withCredentials: true,
       //   },
-      // )
-      .then(data => {
-        this.props.toggleIsFetching(false);
-        this.props.setUsers(data.items);
-        this.props.setTotalUsersCount(data.totalCount);
-      });
+      // )*/
   }
   onPageChanged = pageNumber => {
-    this.props.setCurrentPage(pageNumber);
-    this.props.toggleIsFetching(true);
+    this.props.getUsersThunkCreator(pageNumber, this.props.pageSize);
+
+    // ---------------------------------
+    // this.props.setCurrentPage(pageNumber);
+    // this.props.toggleIsFetching(true);
+    // usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
+    //   this.props.toggleIsFetching(false);
+    //   this.props.setUsers(data.items);
+    // });
+    // ---------------------------------------
     // Axios.get(
     //   `https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count = ${
     //     this.props.pageSize
@@ -45,10 +61,7 @@ class UsersApiComponent extends React.Component {
     //     withCredentials: true,
     //   },
     // )
-    usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
-      this.props.toggleIsFetching(false);
-      this.props.setUsers(data.items);
-    });
+    // -----------------------------------------
   };
 
   render() {
@@ -115,5 +128,6 @@ export default connect(
     setTotalUsersCount,
     toggleIsFetching,
     toggleFollowingProgress,
+    getUsersThunkCreator,
   },
 )(UsersApiComponent);
