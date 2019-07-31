@@ -3,7 +3,7 @@ import styles from './users.module.css';
 import userPhoto from '../../assets/images/users.png';
 import { NavLink } from 'react-router-dom';
 // import * as Axios from 'axios';
-import { usersAPI } from '../../api/api';
+// import { usersAPI } from '../../api/api';
 
 let Users = props => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -47,26 +47,26 @@ let Users = props => {
                 <button
                   disabled={props.followingInProgress.some(id => id === u.id)}
                   onClick={async () => {
-                    // debugger;
-                    await props.toggleFollowingProgress(true, u.id);
-                    await usersAPI
-                      .unfollowUser(u)
-                      // Axios.delete(
-                      //   `https://social-network.samuraijs.com/api/1.0/follow/${
-                      //     u.id
-                      //   }`,
-                      //   {
-                      //     withCredentials: true,
-                      //     headers: {
-                      //       'API-KEY': '635d4a98-5c9c-4ce7-b29e-636f275b6bb7',
-                      //     },
-                      //   },
-                      .then(data => {
-                        if (data.resultCode === 0) {
-                          props.unfollow(u.id);
-                        }
-                      });
-                    await props.toggleFollowingProgress(false, u.id);
+                    props.unfollowUserThunkCreator(u.id);
+                    // await props.toggleFollowingProgress(true, u.id);
+                    // await usersAPI
+                    //   .unfollowUser(u.id)
+                    // Axios.delete(
+                    //   `https://social-network.samuraijs.com/api/1.0/follow/${
+                    //     u.id
+                    //   }`,
+                    //   {
+                    //     withCredentials: true,
+                    //     headers: {
+                    //       'API-KEY': '635d4a98-5c9c-4ce7-b29e-636f275b6bb7',
+                    //     },
+                    //   },
+                    //   .then(data => {
+                    //     if (data.resultCode === 0) {
+                    //       props.unfollow(u.id);
+                    //     }
+                    //   });
+                    // await props.toggleFollowingProgress(false, u.id);
                   }}
                 >
                   Unfollow
@@ -75,17 +75,17 @@ let Users = props => {
                 <button
                   disabled={props.followingInProgress.some(id => id === u.id)}
                   onClick={() => {
-                    // debugger;
-                    props.toggleFollowingProgress(true, u.id);
-                    usersAPI.followUser(u).then(data => {
-                      if (data.resultCode === 0) {
-                        props.follow(u.id);
-                      }
-                      props.toggleFollowingProgress(
-                        false,
-                        u.id,
-                      ); /*В данном случае -  toggleFollowingProgress стоит в обработке ответа, если его вынести за предлы then, то toggleFollowingProgress сработает раньше и передаст false  и мы не увидим disabled*/
-                    });
+                    props.followUserThunkCreator(u.id);
+                    // props.toggleFollowingProgress(true, u.id);
+                    // usersAPI.followUser(u.id).then(data => {
+                    //   if (data.resultCode === 0) {
+                    //     props.follow(u.id);
+                    //   }
+                    //   props.toggleFollowingProgress(
+                    //     false,
+                    //     u.id,
+                    //   ); /*В данном случае -  toggleFollowingProgress стоит в обработке ответа, если его вынести за предлы then, то toggleFollowingProgress сработает раньше и передаст false  и мы не увидим disabled*/
+                    // });
                     // Axios.post(
                     //   `https://social-network.samuraijs.com/api/1.0/follow/${
                     //     u.id

@@ -111,5 +111,27 @@ export const getUsersThunkCreator = (currentPage, pageSize) => {
     });
   };
 };
+export const followUserThunkCreator = userId => {
+  return dispatch => {
+    dispatch(toggleFollowingProgress(true, userId));
+    usersAPI.followUser(userId).then(data => {
+      if (data.resultCode === 0) {
+        dispatch(follow(userId));
+      }
+      dispatch(toggleFollowingProgress(false, userId));
+    });
+  };
+};
+export const unfollowUserThunkCreator = userId => {
+  return dispatch => {
+    dispatch(toggleFollowingProgress(true, userId));
+    usersAPI.unfollowUser(userId).then(data => {
+      if (data.resultCode === 0) {
+        dispatch(unfollow(userId));
+      }
+      dispatch(toggleFollowingProgress(false, userId));
+    });
+  };
+};
 
 export default usersReducer;

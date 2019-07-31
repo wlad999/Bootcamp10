@@ -9,12 +9,14 @@ import {
   // toggleIsFetching,
   toggleFollowingProgress,
   getUsersThunkCreator,
+  followUserThunkCreator,
+  unfollowUserThunkCreator,
 } from '../redux/users-Reducer.js';
 import Users from './Users';
 // import * as Axios from 'axios';
 import Preloader from '../common/preloader/Preloader';
 // import { getUsers } from '../../api/api.js';
-import { usersAPI } from '../../api/api';
+// import { usersAPI } from '../../api/api';
 
 class UsersApiComponent extends React.Component {
   componentDidMount() {
@@ -74,10 +76,12 @@ class UsersApiComponent extends React.Component {
           currentPage={this.props.currentPage}
           onPageChanged={this.onPageChanged}
           users={this.props.users}
-          follow={this.props.follow}
-          unfollow={this.props.unfollow}
-          toggleFollowingProgress={this.props.toggleFollowingProgress}
+          // follow={this.props.follow}
+          // unfollow={this.props.unfollow}
+          // toggleFollowingProgress={this.props.toggleFollowingProgress}
           followingInProgress={this.props.followingInProgress}
+          followUserThunkCreator={this.props.followUserThunkCreator}
+          unfollowUserThunkCreator={this.props.unfollowUserThunkCreator}
         />
       </>
     );
@@ -129,5 +133,7 @@ export default connect(
     // toggleIsFetching,
     toggleFollowingProgress,
     getUsersThunkCreator,
+    followUserThunkCreator,
+    unfollowUserThunkCreator,
   },
 )(UsersApiComponent);
