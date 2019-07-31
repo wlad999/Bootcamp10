@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {
   unfollow,
-  setUsers,
+  // setUsers,
   follow,
-  setCurrentPage,
-  setTotalUsersCount,
-  toggleIsFetching,
+  // setCurrentPage,
+  // setTotalUsersCount,
+  // toggleIsFetching,
   toggleFollowingProgress,
   getUsersThunkCreator,
 } from '../redux/users-Reducer.js';
@@ -123,10 +123,10 @@ export default connect(
   {
     follow,
     unfollow,
-    setUsers: setUsers,
-    setCurrentPage,
-    setTotalUsersCount,
-    toggleIsFetching,
+    // setUsers: setUsers,
+    // setCurrentPage,
+    // setTotalUsersCount,
+    // toggleIsFetching,
     toggleFollowingProgress,
     getUsersThunkCreator,
   },
