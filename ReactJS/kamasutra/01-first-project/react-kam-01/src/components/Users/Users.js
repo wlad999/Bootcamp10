@@ -46,7 +46,7 @@ let Users = props => {
               {u.followed ? (
                 <button
                   disabled={props.followingInProgress.some(id => id === u.id)}
-                  onClick={async () => {
+                  onClick={() => {
                     props.unfollowUserThunkCreator(u.id);
                     // await props.toggleFollowingProgress(true, u.id);
                     // await usersAPI

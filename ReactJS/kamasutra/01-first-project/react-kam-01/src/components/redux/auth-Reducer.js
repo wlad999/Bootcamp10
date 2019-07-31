@@ -1,3 +1,4 @@
+import { authAPI } from '../../api/api';
 const SET_USER_DATA = 'SET_USER_DATA';
 
 let initialState = {
@@ -26,6 +27,21 @@ export const setAuthUserData = (userId, email, login) => ({
   type: SET_USER_DATA,
   data: { userId, email, login },
 });
+//getAuthUserData - thunk
+export const getAuthUserData = () => {
+  return dispatch => {
+    authAPI.me().then(response => {
+      if (response.data.resultCode === 0) {
+        let {
+          id,
+          login,
+          email,
+        } = response.data.data; /*Деструктуризируем нужные свойства в переменные */
+        dispatch(setAuthUserData(id, email, login));
+      }
+    });
+  };
+};
 
 // export const toggleIsFetching = isFetching => ({
 //   type: TOGGLE_IS_FETCHING,
