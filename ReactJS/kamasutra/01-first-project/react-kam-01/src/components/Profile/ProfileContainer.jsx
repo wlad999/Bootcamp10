@@ -9,6 +9,7 @@ import {
 import { withRouter } from 'react-router-dom';
 // import { usersAPI } from '../../api/api';
 import { Redirect } from 'react-router-dom';
+import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
@@ -26,18 +27,40 @@ class ProfileContainer extends React.Component {
     // )
   }
   render() {
-    if (!this.props.isAuth) {
-      return <Redirect to={'/login'} />;
-    }
+    // if (!this.props.isAuth) {
+    //   return <Redirect to={'/login'} />;
+    // }
     return <Profile {...this.props} profile={this.props.profile} />;
   }
 }
-let mapStateToProps = state => ({
-  profile: state.profilePage.profile,
+
+// let AuthRedirectContainer = props => {
+//   if (!this.props.isAuth) {
+//     return <Redirect to={'/login'} />;
+//   }
+//   return <ProfileContainer {...props} />;
+// };
+// МЕняем логику AuthRedirectContainer на  вызов withAuthRedirect
+let AuthRedirectContainer = withAuthRedirect(ProfileContainer);
+
+let mapStateToPropsForRedirect = state => ({
   isAuth: state.auth.isAuth,
 });
 
-let WithUrlDataContainerComponent = withRouter(ProfileContainer);
+AuthRedirectContainer = connect(mapStateToPropsForRedirect)(
+  AuthRedirectContainer,
+);
+
+let mapStateToProps = state => ({
+  profile: state.profilePage.profile,
+});
+// let mapStateToProps = state => ({
+//   profile: state.profilePage.profile,
+//   isAuth: state.auth.isAuth,
+// });
+
+let WithUrlDataContainerComponent = withRouter(AuthRedirectContainer);
+// let WithUrlDataContainerComponent = withRouter(ProfileContainer);
 
 export default connect(
   mapStateToProps,
