@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
+import { Redirect } from 'react-router-dom';
 
 const Dialogs = props => {
   debugger;
@@ -25,7 +26,9 @@ const Dialogs = props => {
   };
   // let newMessageElement = React.createRef();
   // вместо ссылки ref={newMessageElement} используем в функции event.target.value
-
+  if (!props.isAuth) {
+    return <Redirect to={'/login'} />;
+  }
   return (
     <div className={s.dialogs}>
       <div className={s.dialogsItems}>{dialogsElements}</div>

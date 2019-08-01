@@ -5,7 +5,7 @@ import {
 } from '../redux/dialogs-Reducer';
 import Dialogs from './Dialogs';
 // import StoreContext from '../../StoreContext';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 // const DialogsContainer = () => {
 //   debugger;
@@ -34,7 +34,7 @@ import {connect} from 'react-redux';
 // };
 
 let mapStateToProps = state => {
-  return { dialogsPage: state.dialogsPage };
+  return { dialogsPage: state.dialogsPage, isAuth: state.auth.isAuth };
 };
 let mapDispatchToProps = dispatch => {
   return {
