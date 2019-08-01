@@ -8,7 +8,7 @@ import {
 } from '../redux/profile-Reducer';
 import { withRouter } from 'react-router-dom';
 // import { usersAPI } from '../../api/api';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 
 class ProfileContainer extends React.Component {
@@ -42,15 +42,15 @@ class ProfileContainer extends React.Component {
 // };
 // МЕняем логику AuthRedirectContainer на  вызов withAuthRedirect
 let AuthRedirectContainer = withAuthRedirect(ProfileContainer);
+// ---------Эту логику запихнули в withAuthRedirect.js
+// let mapStateToPropsForRedirect = state => ({
+//   isAuth: state.auth.isAuth,
+// });
 
-let mapStateToPropsForRedirect = state => ({
-  isAuth: state.auth.isAuth,
-});
-
-AuthRedirectContainer = connect(mapStateToPropsForRedirect)(
-  AuthRedirectContainer,
-);
-
+// AuthRedirectContainer = connect(mapStateToPropsForRedirect)(
+//   AuthRedirectContainer,
+// );
+// -----------------------------
 let mapStateToProps = state => ({
   profile: state.profilePage.profile,
 });
