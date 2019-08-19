@@ -8,6 +8,7 @@ import Dialogs from './Dialogs';
 import { connect } from 'react-redux';
 // import { Redirect } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import { compose } from 'redux';
 
 // const DialogsContainer = () => {
 //   debugger;
@@ -34,7 +35,7 @@ import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 //     </StoreContext.Consumer>
 //   );
 // };
-let AuthRedirectContainer = withAuthRedirect(Dialogs);
+// let AuthRedirectContainer = withAuthRedirect(Dialogs);
 
 // ---------Эту логику запихнули в withAuthRedirect.js
 // let mapStateToPropsForRedirect = state => {
@@ -68,15 +69,30 @@ let mapDispatchToProps = dispatch => {
 //   }
 //   return <Dialogs {...props} />;
 // };
+// compose(
+//   connect(
+//     mapStateToProps,
+//     mapDispatchToProps,
+//   ),
+//   withAuthRedirect,
+// )(Dialogs);
 
-const DialogsContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AuthRedirectContainer);
+// let AuthRedirectContainer = withAuthRedirect(Dialogs);
+// const DialogsContainer = connect(
+//   mapStateToProps,
+//   mapDispatchToProps,
+// )(AuthRedirectContainer);
 // const DialogsContainer = connect(
 //   mapStateToProps,
 //   mapDispatchToProps,
 // )(Dialogs);
 
-export default DialogsContainer;
+// export default DialogsContainer;
 //
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  ),
+  withAuthRedirect,
+)(Dialogs);

@@ -10,6 +10,7 @@ import { withRouter } from 'react-router-dom';
 // import { usersAPI } from '../../api/api';
 // import { Redirect } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import { compose } from 'redux';
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
@@ -41,7 +42,7 @@ class ProfileContainer extends React.Component {
 //   return <ProfileContainer {...props} />;
 // };
 // МЕняем логику AuthRedirectContainer на  вызов withAuthRedirect
-let AuthRedirectContainer = withAuthRedirect(ProfileContainer);
+// let AuthRedirectContainer = withAuthRedirect(ProfileContainer);
 // ---------Эту логику запихнули в withAuthRedirect.js
 // let mapStateToPropsForRedirect = state => ({
 //   isAuth: state.auth.isAuth,
@@ -59,13 +60,22 @@ let mapStateToProps = state => ({
 //   isAuth: state.auth.isAuth,
 // });
 
-let WithUrlDataContainerComponent = withRouter(AuthRedirectContainer);
+// let WithUrlDataContainerComponent = withRouter(AuthRedirectContainer);
 // let WithUrlDataContainerComponent = withRouter(ProfileContainer);
 
-export default connect(
-  mapStateToProps,
-  {
-    // setUserProfile,
-    getUserProfile,
-  },
-)(WithUrlDataContainerComponent);
+// export default connect(
+//   mapStateToProps,
+//   {
+//     // setUserProfile,
+//     getUserProfile,
+//   },
+// )(WithUrlDataContainerComponent);
+
+export default compose(
+  connect(
+    mapStateToProps,
+    { getUserProfile },
+  ),
+  withRouter,
+  withAuthRedirect,
+)(ProfileContainer);

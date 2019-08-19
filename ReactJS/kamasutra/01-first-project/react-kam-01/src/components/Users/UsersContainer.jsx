@@ -16,6 +16,7 @@ import Users from './Users';
 // import * as Axios from 'axios';
 import Preloader from '../common/preloader/Preloader';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect.js';
+import { compose } from 'redux';
 // import { getUsers } from '../../api/api.js';
 // import { usersAPI } from '../../api/api';
 
@@ -122,22 +123,24 @@ let mapStateToProps = state => {
 //     },
 //   };
 // };
-let withRedirect = withAuthRedirect(UsersApiComponent);
-export default connect(
-  mapStateToProps,
-  {
-    follow,
-    unfollow,
-    // setUsers: setUsers,
-    // setCurrentPage,
-    // setTotalUsersCount,
-    // toggleIsFetching,
-    toggleFollowingProgress,
-    getUsersThunkCreator,
-    followUserThunkCreator,
-    unfollowUserThunkCreator,
-  },
-)(withRedirect);
+// -----------------меняем эту запись на compose-------------------------------
+// let withRedirect = withAuthRedirect(UsersApiComponent);
+// export default connect(
+//   mapStateToProps,
+//   {
+//     follow,
+//     unfollow,
+//     /*// setUsers: setUsers,
+//     // setCurrentPage,
+//     // setTotalUsersCount,
+//     // toggleIsFetching,*/
+//     toggleFollowingProgress,
+//     getUsersThunkCreator,
+//     followUserThunkCreator,
+//     unfollowUserThunkCreator,
+//   },
+// )(withRedirect);
+// --------------------------------------------------------------
 
 // Второй вариан записи - сразу connect оборачиваем в withAuthRedirect
 // export default withAuthRedirect(
@@ -153,3 +156,17 @@ export default connect(
 //     },
 //   )(UsersApiComponent),
 // );
+export default compose(
+  withAuthRedirect,
+  connect(
+    mapStateToProps,
+    {
+      follow,
+      unfollow,
+      toggleFollowingProgress,
+      getUsersThunkCreator,
+      followUserThunkCreator,
+      unfollowUserThunkCreator,
+    },
+  ),
+)(UsersApiComponent);
