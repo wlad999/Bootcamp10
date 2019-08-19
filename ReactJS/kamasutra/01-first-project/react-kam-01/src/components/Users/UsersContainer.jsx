@@ -15,6 +15,7 @@ import {
 import Users from './Users';
 // import * as Axios from 'axios';
 import Preloader from '../common/preloader/Preloader';
+import { withAuthRedirect } from '../../hoc/withAuthRedirect.js';
 // import { getUsers } from '../../api/api.js';
 // import { usersAPI } from '../../api/api';
 
@@ -121,7 +122,7 @@ let mapStateToProps = state => {
 //     },
 //   };
 // };
-
+let withRedirect = withAuthRedirect(UsersApiComponent);
 export default connect(
   mapStateToProps,
   {
@@ -136,4 +137,19 @@ export default connect(
     followUserThunkCreator,
     unfollowUserThunkCreator,
   },
-)(UsersApiComponent);
+)(withRedirect);
+
+// Второй вариан записи - сразу connect оборачиваем в withAuthRedirect
+// export default withAuthRedirect(
+//   connect(
+//     mapStateToProps,
+//     {
+//       follow,
+//       unfollow,
+//       toggleFollowingProgress,
+//       getUsersThunkCreator,
+//       followUserThunkCreator,
+//       unfollowUserThunkCreator,
+//     },
+//   )(UsersApiComponent),
+// );
