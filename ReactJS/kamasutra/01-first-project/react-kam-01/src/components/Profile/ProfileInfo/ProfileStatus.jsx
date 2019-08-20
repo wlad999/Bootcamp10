@@ -5,16 +5,16 @@ class ProfileStatus extends React.Component {
   state = {
     editMode: false,
   };
-  activateEditMode = () => {
+  activateEditMode() {
     this.setState({ editMode: true });
     this.forceUpdate();
-  };
+  }
   render() {
     return (
       <div>
         {!this.state.editMode && (
           <div>
-            <span onDoubleClick={this.activateEditMode}>
+            <span onDoubleClick={this.activateEditMode.bind(this)}>
               {this.props.status}
             </span>
           </div>
