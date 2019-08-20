@@ -7,6 +7,7 @@ import noNeedAJob from '../../../assets/images/no.png';
 import twitter from '../../../assets/images/twitter_PNG32.png';
 import fb from '../../../assets/images/FB.svg';
 import git from '../../../assets/images/GH.png';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = props => {
   if (!props.profile) {
@@ -15,9 +16,9 @@ const ProfileInfo = props => {
   // debugger;
   return (
     <>
-      <div>
+      {/* <div>
         <img src={props.img} alt="" />
-      </div>
+      </div> */}
       <div className={s.descriptionBlock}>
         <img
           src={props.profile.photos.large}
@@ -28,6 +29,8 @@ const ProfileInfo = props => {
           // }
           alt=""
         />
+        <ProfileStatus status={'Hello Rafick!!!'} />
+        <h1> STATUS!!!</h1>
         <div>aboutMe: {props.profile.fullName}</div>
         <div>aboutMe: {props.profile.aboutMe}</div>
         <div>
@@ -51,7 +54,6 @@ const ProfileInfo = props => {
             <img src={git} alt="" width="50px" />
           </a>
         </div>
-        ava + descripyion
       </div>
     </>
   );
