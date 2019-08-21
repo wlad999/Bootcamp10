@@ -7,6 +7,8 @@ const Profile = props => {
     <div>
       <ProfileInfo
         profile={props.profile}
+        status={props.status}
+        updateStatus={props.updateStatus}
         img="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg"
       />
       <MyPostsConytainer />
