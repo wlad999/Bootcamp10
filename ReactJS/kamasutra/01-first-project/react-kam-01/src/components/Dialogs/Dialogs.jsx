@@ -3,6 +3,7 @@ import s from './Dialogs.module.css';
 import Massage from './Massage/Massage';
 import DialogItem from './DialogItem/DialogItem';
 import { Redirect } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
 
 const Dialogs = props => {
   debugger;
@@ -34,7 +35,8 @@ const Dialogs = props => {
       <div className={s.dialogsItems}>{dialogsElements}</div>
       <div>
         <div className={s.messages}>{messegesElements}</div>
-        <textarea
+        <AddMessageForm />
+        {/* <textarea
           placeholder="Enter your massege"
           onChange={onMassegeChange}
           value={state.newMessage}
@@ -43,9 +45,24 @@ const Dialogs = props => {
         />
         <div>
           <button onClick={onSendMessageClick}>add message</button>
-        </div>
+        </div> */}
       </div>
     </div>
+  );
+};
+
+const AddMessageForm = props => {
+  return (
+    <form onSubmit={props.handleSubmit}>
+      <Field
+        component={'textarea'}
+        name="newMessageBody"
+        placeholder="Enter your massege"
+      />
+      <div>
+        <button onClick={props.onSendMessageClick}>add message</button>
+      </div>
+    </form>
   );
 };
 
