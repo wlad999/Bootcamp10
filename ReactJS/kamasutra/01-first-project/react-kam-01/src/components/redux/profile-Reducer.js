@@ -20,7 +20,7 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST: {
-      let newMesInPost = action.newPostBody;
+      let newMesInPost = action.newPostText;
       let newPost = {
         id: 5,
         message: newMesInPost,
@@ -56,9 +56,9 @@ const profileReducer = (state = initialState, action) => {
   }
 };
 
-export const addPostActionCreator = newPostBody => ({
+export const addPostActionCreator = newPostText => ({
   type: ADD_POST,
-  newPostBody,
+  newPostText,
 });
 // export const updateNewPostTextActionCreator = text => ({
 //   type: UPDATE_NEW_POST_TEXT,
