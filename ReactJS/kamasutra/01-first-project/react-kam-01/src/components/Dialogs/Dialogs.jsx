@@ -6,7 +6,6 @@ import { Redirect } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
 const Dialogs = props => {
-  debugger;
   let state = props.dialogsPage;
   let dialogsElements = state.dialogs.map(dialog => (
     <DialogItem name={dialog.name} id={dialog.id} key={dialog.id} />
@@ -60,10 +59,13 @@ const AddMessageForm = props => {
         placeholder="Enter your massege"
       />
       <div>
-        <button onClick={props.onSendMessageClick}>add message</button>
+        <button>add message</button>
       </div>
     </form>
   );
 };
+const AddMessageFormRedux = reduxForm({ form: 'dialogsAddMessageForm' })(
+  AddMessageForm,
+);
 
 export default Dialogs;
