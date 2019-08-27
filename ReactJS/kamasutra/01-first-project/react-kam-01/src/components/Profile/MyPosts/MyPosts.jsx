@@ -6,6 +6,7 @@ import {
   required,
   maxLengthCreator,
 } from '../../../utils/validators/validators';
+import { TextArea } from '../../common/FormsControls/FormsControls';
 
 const MyPosts = props => {
   let postsElements = props.posts.map(p => (
@@ -32,7 +33,7 @@ const AddNewPostForm = props => {
   return (
     <form onSubmit={props.handleSubmit}>
       <Field
-        component={'textarea'}
+        component={TextArea}
         name="newPostText"
         placeholder="Enter your post"
         validate={[required, maxLength10]}
