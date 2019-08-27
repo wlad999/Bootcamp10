@@ -41,7 +41,7 @@ const ProfileInfo = props => {
           {props.profile.lookingForAJob ? (
             <img src={lookingForAJob} alt="" className={s.job} />
           ) : (
-            <img src={noNeedAJob} alt="" />
+            <img width="200px" src={noNeedAJob} alt="" />
           )}
         </div>
         <div>

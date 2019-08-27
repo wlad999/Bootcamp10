@@ -14,18 +14,10 @@ const Dialogs = props => {
   let messegesElements = state.messages.map(m => (
     <Massage message={m.message} key={m.id} />
   ));
-  let onSendMessageClick = () => {
-    props.sendMessage();
-  };
 
-  let onMassegeChange = e => {
-    let body = e.target.value;
-    props.updateNewMessageBody(body);
-    // let newMes = newMessageElement.current.value;
-    // вместо ссылки ref={newMessageElement} используем в функции event.target.value
+  let addNewMessage = values => {
+    props.sendMessage(values.newMessageBody);
   };
-  // let newMessageElement = React.createRef();
-  // вместо ссылки ref={newMessageElement} используем в функции event.target.value
   if (!props.isAuth) {
     return <Redirect to={'/login'} />;
   }
@@ -34,7 +26,7 @@ const Dialogs = props => {
       <div className={s.dialogsItems}>{dialogsElements}</div>
       <div>
         <div className={s.messages}>{messegesElements}</div>
-        <AddMessageForm />
+        <AddMessageFormRedux onSubmit={addNewMessage} />
         {/* <textarea
           placeholder="Enter your massege"
           onChange={onMassegeChange}
@@ -59,7 +51,7 @@ const AddMessageForm = props => {
         placeholder="Enter your massege"
       />
       <div>
-        <button>add message</button>
+        <button>send</button>
       </div>
     </form>
   );
