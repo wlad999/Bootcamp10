@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import {
   // setAuthUserData
   getAuthUserData,
+  logout,
 } from '../redux/auth-Reducer.js';
 // import { authAPI } from '../../api/api';
 
@@ -39,6 +40,6 @@ export default connect(
   mapStateToProps,
   {
     getAuthUserData,
-    // setAuthUserData
+    logout,
   },
 )(HeaderContainer);
