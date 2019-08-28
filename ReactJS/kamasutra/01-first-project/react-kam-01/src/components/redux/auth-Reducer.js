@@ -28,19 +28,17 @@ export const setAuthUserData = (userId, email, login, isAuth) => ({
   payload: { userId, email, login, isAuth },
 });
 //getAuthUserData - thunk
-export const getAuthUserData = () => {
-  return dispatch => {
-    authAPI.me().then(response => {
-      if (response.data.resultCode === 0) {
-        let {
-          id,
-          login,
-          email,
-        } = response.data.data; /*Деструктуризируем нужные свойства в переменные */
-        dispatch(setAuthUserData(id, email, login, true));
-      }
-    });
-  };
+export const getAuthUserData = () => dispatch => {
+  return authAPI.me().then(response => {
+    if (response.data.resultCode === 0) {
+      let {
+        id,
+        login,
+        email,
+      } = response.data.data; /*Деструктуризируем нужные свойства в переменные */
+      dispatch(setAuthUserData(id, email, login, true));
+    }
+  });
 };
 //login - thunk Creator - функция которая возвращает санку и может принимать чтото и то что-то доступно санке благодаря замыканию
 // thunk - это функция которая принимает метод dispatch

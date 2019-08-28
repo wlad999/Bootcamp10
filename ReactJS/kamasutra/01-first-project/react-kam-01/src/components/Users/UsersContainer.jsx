@@ -157,7 +157,7 @@ let mapStateToProps = state => {
 //   )(UsersApiComponent),
 // );
 export default compose(
-  withAuthRedirect,
+  // withAuthRedirect,
   connect(
     mapStateToProps,
     {
