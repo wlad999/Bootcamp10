@@ -26,9 +26,15 @@ export const initialaizedSuccess = () => ({
 // thunk - это функция которая принимает метод dispatch
 export const initializeApp = () => dispatch => {
   let promise = dispatch(getAuthUserData());
-  promise.then(() => {
+
+  // Если у нас есть несколько диспатчей и мы хотим дождаться выполнения всех, прежде чем поригициализироваться-накой синтаксис
+  // Promise.all([promise]), в массив происуем все примисы
+  Promise.all([promise]).then(() => {
     dispatch(initialaizedSuccess());
   });
+  // promise.then(() => {
+  //   dispatch(initialaizedSuccess());
+  // });
 };
 
 export default appReducer;
