@@ -7,7 +7,8 @@ import noNeedAJob from '../../../assets/images/no.png';
 import twitter from '../../../assets/images/twitter_PNG32.png';
 import fb from '../../../assets/images/FB.svg';
 import git from '../../../assets/images/GH.png';
-import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
+// import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = props => {
   if (!props.profile) {
@@ -29,7 +30,7 @@ const ProfileInfo = props => {
           // }
           alt=""
         />
-        <ProfileStatus
+        <ProfileStatusWithHooks
           status={props.status}
           updateStatus={props.updateStatus}
         />
